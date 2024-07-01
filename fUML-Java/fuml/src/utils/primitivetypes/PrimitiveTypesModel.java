@@ -13,7 +13,7 @@ public class PrimitiveTypesModel extends InMemoryModel
     public PrimitiveType PrimitiveTypes_String = new PrimitiveType();
     public PrimitiveType PrimitiveTypes_UnlimitedNatural = new PrimitiveType();
 
-    public static PrimitiveTypesModel Instance()
+    public static PrimitiveTypesModel instance()
     {
         if (instance == null)
         {

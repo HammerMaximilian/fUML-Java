@@ -440,7 +440,7 @@ public class FoundationalModelLibraryModel extends InMemoryModel
     public ObjectFlow FoundationalModelLibrary_BasicInputOutput_ReadLine_From_readLine_result_To_result = new ObjectFlow();
     public ObjectFlow FoundationalModelLibrary_BasicInputOutput_ReadLine_From_readLine_errorStatus_To_errorStatus = new ObjectFlow();
 
-    public static FoundationalModelLibraryModel Instance()
+    public static FoundationalModelLibraryModel instance()
     {
         if (instance == null)
         {
@@ -463,15 +463,15 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_And.setName("And");
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_And_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_And_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_And_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_And.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_And_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_And_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_And_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_And_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_And.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_And_y);
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_And_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_And_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_And_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_And_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_And.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_And_result);
 
@@ -479,15 +479,15 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Implies.setName("Implies");
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Implies_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Implies_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Implies_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Implies.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Implies_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Implies_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Implies_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Implies_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Implies.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Implies_y);
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Implies_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Implies_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Implies_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Implies_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Implies.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Implies_result);
 
@@ -495,11 +495,11 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Not.setName("Not");
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Not_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Not_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Not_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Not.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Not_x);
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Not_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Not_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Not_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Not_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Not.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Not_result);
 
@@ -507,15 +507,15 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Or.setName("Or");
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Or_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Or_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Or_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Or.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Or_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Or_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Or_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Or_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Or.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Or_y);
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Or_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Or_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Or_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Or_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Or.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Or_result);
 
@@ -523,11 +523,11 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_ToBoolean.setName("ToBoolean");
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_ToBoolean_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_ToBoolean_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_String);
+        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_ToBoolean_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_String);
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_ToBoolean.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_ToBoolean_x);
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_ToBoolean_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_ToBoolean_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_ToBoolean_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_ToBoolean_result.setLower(0);
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_ToBoolean_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_ToBoolean.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_ToBoolean_result);
@@ -536,11 +536,11 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_ToString.setName("ToString");
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_ToString_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_ToString_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_ToString_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_ToString.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_ToString_x);
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_ToString_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_ToString_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_String);
+        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_ToString_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_String);
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_ToString_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_ToString.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_ToString_result);
 
@@ -548,15 +548,15 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Xor.setName("Xor");
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Xor_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Xor_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Xor_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Xor.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Xor_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Xor_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Xor_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Xor_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Xor.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Xor_y);
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Xor_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Xor_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Xor_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Xor_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Xor.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Xor_result);
 
@@ -567,140 +567,140 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Abs.setName("Abs");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Abs_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Abs_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Abs_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Abs_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Abs.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Abs_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Abs_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Abs_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Abs_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Abs.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Abs_x);
 
         //FunctionBehavior Div
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Div.setName("Div");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Div_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Div_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Div_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Div_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Div.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Div_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Div_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Div_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Div_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Div.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Div_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Div_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Div_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Div_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Div.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Div_y);
 
         //FunctionBehavior Max
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Max.setName("Max");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Max_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Max_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Max_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Max_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Max.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Max_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Max_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Max_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Max_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Max.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Max_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Max_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Max_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Max_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Max.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Max_y);
 
         //FunctionBehavior Min
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Min.setName("Min");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Min_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Min_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Min_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Min_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Min.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Min_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Min_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Min_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Min_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Min.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Min_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Min_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Min_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Min_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Min.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Min_y);
 
         //FunctionBehavior Mod
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Mod.setName("Mod");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Mod_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Mod_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Mod_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Mod_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Mod.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Mod_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Mod_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Mod_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Mod_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Mod.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Mod_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Mod_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Mod_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Mod_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Mod.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Mod_y);
 
         //FunctionBehavior Neg
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Neg.setName("Neg");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Neg_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Neg_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Neg_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Neg_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Neg.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Neg_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Neg_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Neg_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Neg_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Neg.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Neg_x);
 
         //FunctionBehavior ToInteger
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToInteger.setName("ToInteger");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToInteger_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToInteger_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToInteger_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToInteger_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToInteger.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToInteger_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToInteger_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToInteger_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_String);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToInteger_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_String);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToInteger.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToInteger_x);
 
         //FunctionBehavior ToString
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToString.setName("ToString");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToString_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToString_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_String);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToString_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_String);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToString_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToString.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToString_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToString_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToString_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToString_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToString.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToString_x);
 
         //FunctionBehavior ToUnlimitedNatural
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToUnlimitedNatural.setName("ToUnlimitedNatural");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToUnlimitedNatural_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToUnlimitedNatural_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_UnlimitedNatural);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToUnlimitedNatural_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_UnlimitedNatural);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToUnlimitedNatural_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToUnlimitedNatural.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToUnlimitedNatural_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToUnlimitedNatural_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToUnlimitedNatural_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToUnlimitedNatural_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToUnlimitedNatural.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToUnlimitedNatural_x);
 
         //FunctionBehavior divide
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_divide.setName("/");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_divide_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_divide_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_divide_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_divide_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_divide.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_divide_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_divide_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_divide_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_divide_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_divide.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_divide_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_divide_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_divide_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_divide_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_divide.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_divide_y);
         /* NOT PRESENT IN FUML LIBRARY
 			//FunctionBehavior equals
@@ -716,112 +716,112 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterOrEqual.setName(">=");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterOrEqual_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterOrEqual_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterOrEqual_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterOrEqual_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterOrEqual.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterOrEqual_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterOrEqual_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterOrEqual_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterOrEqual_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterOrEqual.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterOrEqual_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterOrEqual_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterOrEqual_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterOrEqual_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterOrEqual.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterOrEqual_y);
 
         //FunctionBehavior greaterThan
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterThan.setName(">");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterThan_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterThan_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterThan_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterThan_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterThan.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterThan_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterThan_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterThan_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterThan_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterThan.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterThan_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterThan_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterThan_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterThan_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterThan.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterThan_y);
 
         //FunctionBehavior lessOrEqual
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessOrEqual.setName("<=");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessOrEqual_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessOrEqual_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessOrEqual_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessOrEqual_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessOrEqual.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessOrEqual_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessOrEqual_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessOrEqual_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessOrEqual_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessOrEqual.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessOrEqual_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessOrEqual_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessOrEqual_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessOrEqual_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessOrEqual.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessOrEqual_y);
 
         //FunctionBehavior lessThan
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessThan.setName("<");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessThan_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessThan_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessThan_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessThan_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessThan.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessThan_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessThan_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessThan_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessThan_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessThan.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessThan_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessThan_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessThan_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessThan_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessThan.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessThan_y);
 
         //FunctionBehavior minus
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_minus.setName("-");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_minus_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_minus_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_minus_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_minus_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_minus.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_minus_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_minus_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_minus_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_minus_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_minus.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_minus_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_minus_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_minus_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_minus_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_minus.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_minus_y);
 
         //FunctionBehavior plus
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_plus.setName("+");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_plus_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_plus_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_plus_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_plus_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_plus.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_plus_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_plus_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_plus_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_plus_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_plus.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_plus_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_plus_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_plus_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_plus_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_plus.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_plus_y);
 
         //FunctionBehavior times
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_times.setName("*");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_times_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_times_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_times_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_times_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_times.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_times_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_times_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_times_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_times_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_times.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_times_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_times_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_times_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_times_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_times.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_times_y);
 
         /*
@@ -831,144 +831,144 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Abs.setName("Abs");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Abs_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Abs_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Abs_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Abs_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Abs.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Abs_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Abs_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Abs_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Abs_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Abs.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Abs_x);
 
         //FunctionBehavior Floor
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Floor.setName("Floor");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Floor_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Floor_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Floor_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Floor_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Floor.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Floor_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Floor_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Floor_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Floor_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Floor.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Floor_x);
 
         //FunctionBehavior Inv
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Inv.setName("Inv");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Inv_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Inv_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Inv_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Inv_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Inv.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Inv_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Inv_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Inv_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Inv_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Inv.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Inv_x);
 
         //FunctionBehavior Max
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Max.setName("Max");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Max_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Max_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Max_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Max_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Max.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Max_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Max_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Max_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Max_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Max.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Max_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Max_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Max_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Max_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Max.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Max_y);
 
         //FunctionBehavior Min
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Min.setName("Min");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Min_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Min_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Min_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Min_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Min.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Min_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Min_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Min_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Min_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Min.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Min_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Min_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Min_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Min_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Min.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Min_y);
 
         //FunctionBehavior Neg
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Neg.setName("Neg");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Neg_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Neg_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Neg_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Neg_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Neg.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Neg_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Neg_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Neg_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Neg_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Neg.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Neg_x);
 
         //FunctionBehavior Round
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Round.setName("Round");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Round_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Round_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Round_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Round_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Round.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Round_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Round_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Round_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Round_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Round.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Round_x);
 
         //FunctionBehavior ToInteger
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToInteger.setName("ToInteger");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToInteger_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToInteger_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToInteger_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToInteger_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToInteger.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToInteger_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToInteger_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToInteger_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToInteger_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToInteger.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToInteger_x);
 
         //FunctionBehavior ToReal
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToReal.setName("ToReal");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToReal_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToReal_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToReal_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToReal_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToReal.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToReal_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToReal_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToReal_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_String);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToReal_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_String);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToReal.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToReal_x);
 
         //FunctionBehavior ToString
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToString.setName("ToString");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToString_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToString_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_String);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToString_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_String);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToString_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToString.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToString_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToString_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToString_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToString_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToString.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_ToString_x);
 
         //FunctionBehavior divide
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_divide.setName("/");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_divide_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_divide_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_divide_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_divide_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_divide.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_divide_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_divide_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_divide_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_divide_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_divide.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_divide_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_divide_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_divide_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_divide_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_divide.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_divide_y);
         /* NOT PRESENT IN FUML LIBRARY
 			//FunctionBehavior equals
@@ -984,112 +984,112 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterOrEqual.setName(">=");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterOrEqual_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterOrEqual_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterOrEqual_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterOrEqual_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterOrEqual.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterOrEqual_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterOrEqual_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterOrEqual_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterOrEqual_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterOrEqual.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterOrEqual_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterOrEqual_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterOrEqual_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterOrEqual_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterOrEqual.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterOrEqual_y);
 
         //FunctionBehavior greaterThan
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterThan.setName(">");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterThan_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterThan_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterThan_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterThan_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterThan.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterThan_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterThan_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterThan_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterThan_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterThan.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterThan_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterThan_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterThan_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterThan_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterThan.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_greaterThan_y);
 
         //FunctionBehavior lessOrEqual
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessOrEqual.setName("<=");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessOrEqual_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessOrEqual_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessOrEqual_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessOrEqual_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessOrEqual.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessOrEqual_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessOrEqual_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessOrEqual_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessOrEqual_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessOrEqual.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessOrEqual_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessOrEqual_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessOrEqual_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessOrEqual_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessOrEqual.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessOrEqual_y);
 
         //FunctionBehavior lessThan
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessThan.setName("<");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessThan_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessThan_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessThan_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessThan_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessThan.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessThan_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessThan_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessThan_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessThan_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessThan.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessThan_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessThan_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessThan_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessThan_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessThan.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_lessThan_y);
 
         //FunctionBehavior minus
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_minus.setName("-");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_minus_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_minus_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_minus_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_minus_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_minus.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_minus_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_minus_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_minus_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_minus_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_minus.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_minus_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_minus_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_minus_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_minus_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_minus.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_minus_y);
 
         //FunctionBehavior plus
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_plus.setName("+");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_plus_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_plus_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_plus_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_plus_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_plus.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_plus_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_plus_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_plus_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_plus_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_plus.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_plus_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_plus_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_plus_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_plus_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_plus.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_plus_y);
 
         //FunctionBehavior times
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_times.setName("*");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_times_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_times_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_times_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_times_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_times.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_times_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_times_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_times_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_times_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_times.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_times_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_times_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_times_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_times_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_times.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_times_y);
 
         /*
@@ -1099,48 +1099,48 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Concat.setName("Concat");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Concat_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Concat_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_String);
+        FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Concat_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_String);
         FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Concat_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Concat.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Concat_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Concat_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Concat_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_String);
+        FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Concat_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_String);
         FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Concat.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Concat_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Concat_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Concat_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_String);
+        FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Concat_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_String);
         FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Concat.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Concat_y);
 
         //FunctionBehavior Size
         FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Size.setName("Size");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Size_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Size_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Size_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Size_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Size.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Size_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Size_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Size_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_String);
+        FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Size_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_String);
         FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Size.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Size_x);
 
         //FunctionBehavior Substring
         FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Substring.setName("Substring");
         //Parameter lower
         FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Substring_lower.setName("lower");
-        FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Substring_lower.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Substring_lower.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Substring.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Substring_lower);
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Substring_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Substring_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_String);
+        FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Substring_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_String);
         FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Substring_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Substring.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Substring_result);
         //Parameter upper
         FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Substring_upper.setName("upper");
-        FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Substring_upper.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Substring_upper.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Substring.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Substring_upper);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Substring_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Substring_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_String);
+        FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Substring_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_String);
         FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Substring.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Substring_x);
 
         /*
@@ -1150,68 +1150,68 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Max.setName("Max");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Max_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Max_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_UnlimitedNatural);
+        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Max_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_UnlimitedNatural);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Max_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Max.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Max_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Max_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Max_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_UnlimitedNatural);
+        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Max_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_UnlimitedNatural);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Max.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Max_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Max_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Max_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_UnlimitedNatural);
+        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Max_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_UnlimitedNatural);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Max.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Max_y);
 
         //FunctionBehavior Min
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Min.setName("Min");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Min_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Min_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_UnlimitedNatural);
+        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Min_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_UnlimitedNatural);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Min_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Min.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Min_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Min_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Min_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_UnlimitedNatural);
+        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Min_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_UnlimitedNatural);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Min.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Min_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Min_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Min_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_UnlimitedNatural);
+        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Min_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_UnlimitedNatural);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Min.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Min_y);
 
         //FunctionBehavior ToInteger
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToInteger.setName("ToInteger");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToInteger_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToInteger_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToInteger_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToInteger_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToInteger.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToInteger_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToInteger_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToInteger_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_UnlimitedNatural);
+        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToInteger_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_UnlimitedNatural);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToInteger.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToInteger_x);
 
         //FunctionBehavior ToString
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToString.setName("ToString");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToString_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToString_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_String);
+        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToString_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_String);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToString_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToString.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToString_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToString_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToString_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_UnlimitedNatural);
+        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToString_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_UnlimitedNatural);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToString.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToString_x);
 
         //FunctionBehavior ToUnlimitedNatural
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToUnlimitedNatural.setName("ToUnlimitedNatural");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToUnlimitedNatural_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToUnlimitedNatural_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_UnlimitedNatural);
+        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToUnlimitedNatural_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_UnlimitedNatural);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToUnlimitedNatural_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToUnlimitedNatural.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToUnlimitedNatural_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToUnlimitedNatural_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToUnlimitedNatural_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_String);
+        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToUnlimitedNatural_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_String);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToUnlimitedNatural.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToUnlimitedNatural_x);
         /* NOT PRESENT IN FUML LIBRARY
 			//FunctionBehavior equals
@@ -1227,64 +1227,64 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterOrEqual.setName(">=");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterOrEqual_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterOrEqual_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterOrEqual_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterOrEqual_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterOrEqual.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterOrEqual_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterOrEqual_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterOrEqual_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_UnlimitedNatural);
+        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterOrEqual_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_UnlimitedNatural);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterOrEqual.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterOrEqual_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterOrEqual_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterOrEqual_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_UnlimitedNatural);
+        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterOrEqual_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_UnlimitedNatural);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterOrEqual.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterOrEqual_y);
 
         //FunctionBehavior greaterThan
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterThan.setName(">");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterThan_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterThan_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterThan_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterThan_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterThan.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterThan_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterThan_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterThan_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_UnlimitedNatural);
+        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterThan_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_UnlimitedNatural);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterThan.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterThan_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterThan_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterThan_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_UnlimitedNatural);
+        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterThan_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_UnlimitedNatural);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterThan.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterThan_y);
 
         //FunctionBehavior lessOrEqual
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessOrEqual.setName("<=");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessOrEqual_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessOrEqual_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessOrEqual_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessOrEqual_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessOrEqual.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessOrEqual_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessOrEqual_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessOrEqual_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_UnlimitedNatural);
+        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessOrEqual_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_UnlimitedNatural);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessOrEqual.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessOrEqual_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessOrEqual_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessOrEqual_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_UnlimitedNatural);
+        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessOrEqual_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_UnlimitedNatural);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessOrEqual.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessOrEqual_y);
 
         //FunctionBehavior lessThan
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessThan.setName("<");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessThan_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessThan_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessThan_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessThan_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessThan.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessThan_result);
         //Parameter x
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessThan_x.setName("x");
-        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessThan_x.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_UnlimitedNatural);
+        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessThan_x.setType(PrimitiveTypesModel.instance().PrimitiveTypes_UnlimitedNatural);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessThan.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessThan_x);
         //Parameter y
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessThan_y.setName("y");
-        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessThan_y.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_UnlimitedNatural);
+        FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessThan_y.setType(PrimitiveTypesModel.instance().PrimitiveTypes_UnlimitedNatural);
         FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessThan.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_lessThan_y);
 
         /*
@@ -1294,7 +1294,7 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_PrimitiveBehaviors_ListFunctions_ListSize.setName("ListSize");
         //Parameter result
         FoundationalModelLibrary_PrimitiveBehaviors_ListFunctions_ListSize_result.setName("result");
-        FoundationalModelLibrary_PrimitiveBehaviors_ListFunctions_ListSize_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_ListFunctions_ListSize_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_ListFunctions_ListSize_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_PrimitiveBehaviors_ListFunctions_ListSize.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_ListFunctions_ListSize_result);
         //Parameter list
@@ -1311,7 +1311,7 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_PrimitiveBehaviors_ListFunctions_ListGet.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_ListFunctions_ListGet_result);
         //Parameter index
         FoundationalModelLibrary_PrimitiveBehaviors_ListFunctions_ListGet_index.setName("index");
-        FoundationalModelLibrary_PrimitiveBehaviors_ListFunctions_ListGet_index.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_PrimitiveBehaviors_ListFunctions_ListGet_index.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_PrimitiveBehaviors_ListFunctions_ListGet.addOwnedParameter(FoundationalModelLibrary_PrimitiveBehaviors_ListFunctions_ListGet_index);
         //Parameter list
         FoundationalModelLibrary_PrimitiveBehaviors_ListFunctions_ListGet_list.setName("list");
@@ -1361,15 +1361,15 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_Common_Status.setName("Status");
         //Property context
         FoundationalModelLibrary_Common_Status_context.setName("context");
-        FoundationalModelLibrary_Common_Status_context.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_String);
+        FoundationalModelLibrary_Common_Status_context.setType(PrimitiveTypesModel.instance().PrimitiveTypes_String);
         FoundationalModelLibrary_Common_Status.addOwnedAttribute(FoundationalModelLibrary_Common_Status_context);
         //Property code
         FoundationalModelLibrary_Common_Status_code.setName("code");
-        FoundationalModelLibrary_Common_Status_code.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_Common_Status_code.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_Common_Status.addOwnedAttribute(FoundationalModelLibrary_Common_Status_code);
         //Property description
         FoundationalModelLibrary_Common_Status_description.setName("description");
-        FoundationalModelLibrary_Common_Status_description.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_String);
+        FoundationalModelLibrary_Common_Status_description.setType(PrimitiveTypesModel.instance().PrimitiveTypes_String);
         FoundationalModelLibrary_Common_Status.addOwnedAttribute(FoundationalModelLibrary_Common_Status_description);
 
         /*
@@ -1383,7 +1383,7 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_BasicInputOutput_Channel_getName.setIsAbstract(true);
         //Parameter ReturnResult
         FoundationalModelLibrary_BasicInputOutput_Channel_getName_ReturnResult.setName("ReturnResult");
-        FoundationalModelLibrary_BasicInputOutput_Channel_getName_ReturnResult.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_String);
+        FoundationalModelLibrary_BasicInputOutput_Channel_getName_ReturnResult.setType(PrimitiveTypesModel.instance().PrimitiveTypes_String);
         FoundationalModelLibrary_BasicInputOutput_Channel_getName_ReturnResult.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_BasicInputOutput_Channel_getName.addOwnedParameter(FoundationalModelLibrary_BasicInputOutput_Channel_getName_ReturnResult);
         FoundationalModelLibrary_BasicInputOutput_Channel.addOwnedOperation(FoundationalModelLibrary_BasicInputOutput_Channel_getName);
@@ -1410,7 +1410,7 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_BasicInputOutput_Channel_isOpen.setIsAbstract(true);
         //Parameter ReturnResult
         FoundationalModelLibrary_BasicInputOutput_Channel_isOpen_ReturnResult.setName("ReturnResult");
-        FoundationalModelLibrary_BasicInputOutput_Channel_isOpen_ReturnResult.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_BasicInputOutput_Channel_isOpen_ReturnResult.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_BasicInputOutput_Channel_isOpen_ReturnResult.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_BasicInputOutput_Channel_isOpen.addOwnedParameter(FoundationalModelLibrary_BasicInputOutput_Channel_isOpen_ReturnResult);
         FoundationalModelLibrary_BasicInputOutput_Channel.addOwnedOperation(FoundationalModelLibrary_BasicInputOutput_Channel_isOpen);
@@ -1435,7 +1435,7 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_BasicInputOutput_InputChannel_hasMore.setIsAbstract(true);
         //Parameter ReturnResult
         FoundationalModelLibrary_BasicInputOutput_InputChannel_hasMore_ReturnResult.setName("ReturnResult");
-        FoundationalModelLibrary_BasicInputOutput_InputChannel_hasMore_ReturnResult.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_BasicInputOutput_InputChannel_hasMore_ReturnResult.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_BasicInputOutput_InputChannel_hasMore_ReturnResult.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_BasicInputOutput_InputChannel_hasMore.addOwnedParameter(FoundationalModelLibrary_BasicInputOutput_InputChannel_hasMore_ReturnResult);
         FoundationalModelLibrary_BasicInputOutput_InputChannel.addOwnedOperation(FoundationalModelLibrary_BasicInputOutput_InputChannel_hasMore);
@@ -1477,7 +1477,7 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_BasicInputOutput_OutputChannel_isFull.setIsAbstract(true);
         //Parameter ReturnResult
         FoundationalModelLibrary_BasicInputOutput_OutputChannel_isFull_ReturnResult.setName("ReturnResult");
-        FoundationalModelLibrary_BasicInputOutput_OutputChannel_isFull_ReturnResult.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_BasicInputOutput_OutputChannel_isFull_ReturnResult.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_BasicInputOutput_OutputChannel_isFull_ReturnResult.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_BasicInputOutput_OutputChannel_isFull.addOwnedParameter(FoundationalModelLibrary_BasicInputOutput_OutputChannel_isFull_ReturnResult);
         FoundationalModelLibrary_BasicInputOutput_OutputChannel.addOwnedOperation(FoundationalModelLibrary_BasicInputOutput_OutputChannel_isFull);
@@ -1504,7 +1504,7 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readCharacter.setName("readCharacter");
         //Parameter ReturnResult
         FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readCharacter_ReturnResult.setName("ReturnResult");
-        FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readCharacter_ReturnResult.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_String);
+        FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readCharacter_ReturnResult.setType(PrimitiveTypesModel.instance().PrimitiveTypes_String);
         FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readCharacter_ReturnResult.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readCharacter.addOwnedParameter(FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readCharacter_ReturnResult);
         //Parameter errorStatus
@@ -1517,7 +1517,7 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_BasicInputOutput_TextInputChannel_peekCharacter.setName("peekCharacter");
         //Parameter OwnedParameter
         FoundationalModelLibrary_BasicInputOutput_TextInputChannel_peekCharacter_OwnedParameter.setName("OwnedParameter");
-        FoundationalModelLibrary_BasicInputOutput_TextInputChannel_peekCharacter_OwnedParameter.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_String);
+        FoundationalModelLibrary_BasicInputOutput_TextInputChannel_peekCharacter_OwnedParameter.setType(PrimitiveTypesModel.instance().PrimitiveTypes_String);
         FoundationalModelLibrary_BasicInputOutput_TextInputChannel_peekCharacter_OwnedParameter.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_BasicInputOutput_TextInputChannel_peekCharacter.addOwnedParameter(FoundationalModelLibrary_BasicInputOutput_TextInputChannel_peekCharacter_OwnedParameter);
         //Parameter errorStatus
@@ -1530,7 +1530,7 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readLine.setName("readLine");
         //Parameter ReturnResult
         FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readLine_ReturnResult.setName("ReturnResult");
-        FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readLine_ReturnResult.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_String);
+        FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readLine_ReturnResult.setType(PrimitiveTypesModel.instance().PrimitiveTypes_String);
         FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readLine_ReturnResult.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readLine.addOwnedParameter(FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readLine_ReturnResult);
         //Parameter errorStatus
@@ -1543,7 +1543,7 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readInteger.setName("readInteger");
         //Parameter ReturnResult
         FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readInteger_ReturnResult.setName("ReturnResult");
-        FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readInteger_ReturnResult.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readInteger_ReturnResult.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readInteger_ReturnResult.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readInteger.addOwnedParameter(FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readInteger_ReturnResult);
         //Parameter errorStatus
@@ -1556,7 +1556,7 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readReal.setName("readReal");
         //Parameter ReturnResult
         FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readReal_ReturnResult.setName("ReturnResult");
-        FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readReal_ReturnResult.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readReal_ReturnResult.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readReal_ReturnResult.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readReal.addOwnedParameter(FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readReal_ReturnResult);
         //Parameter errorStatus
@@ -1569,7 +1569,7 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readBoolean.setName("readBoolean");
         //Parameter ReturnResult
         FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readBoolean_ReturnResult.setName("ReturnResult");
-        FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readBoolean_ReturnResult.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readBoolean_ReturnResult.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readBoolean_ReturnResult.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readBoolean.addOwnedParameter(FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readBoolean_ReturnResult);
         //Parameter errorStatus
@@ -1582,7 +1582,7 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readUnlimitedNatural.setName("readUnlimitedNatural");
         //Parameter ReturnResult
         FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readUnlimitedNatural_ReturnResult.setName("ReturnResult");
-        FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readUnlimitedNatural_ReturnResult.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_UnlimitedNatural);
+        FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readUnlimitedNatural_ReturnResult.setType(PrimitiveTypesModel.instance().PrimitiveTypes_UnlimitedNatural);
         FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readUnlimitedNatural_ReturnResult.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readUnlimitedNatural.addOwnedParameter(FoundationalModelLibrary_BasicInputOutput_TextInputChannel_readUnlimitedNatural_ReturnResult);
         //Parameter errorStatus
@@ -1616,7 +1616,7 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeString.setName("writeString");
         //Parameter value
         FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeString_value.setName("value");
-        FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeString_value.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_String);
+        FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeString_value.setType(PrimitiveTypesModel.instance().PrimitiveTypes_String);
         FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeString.addOwnedParameter(FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeString_value);
         //Parameter errorStatus
         FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeString_errorStatus.setName("errorStatus");
@@ -1637,7 +1637,7 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeLine.setName("writeLine");
         //Parameter value
         FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeLine_value.setName("value");
-        FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeLine_value.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_String);
+        FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeLine_value.setType(PrimitiveTypesModel.instance().PrimitiveTypes_String);
         FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeLine.addOwnedParameter(FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeLine_value);
         //Parameter errorStatus
         FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeLine_errorStatus.setName("errorStatus");
@@ -1649,7 +1649,7 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeInteger.setName("writeInteger");
         //Parameter value
         FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeInteger_value.setName("value");
-        FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeInteger_value.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Integer);
+        FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeInteger_value.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Integer);
         FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeInteger.addOwnedParameter(FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeInteger_value);
         //Parameter errorStatus
         FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeInteger_errorStatus.setName("errorStatus");
@@ -1661,7 +1661,7 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeReal.setName("writeReal");
         //Parameter value
         FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeReal_value.setName("value");
-        FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeReal_value.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Real);
+        FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeReal_value.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Real);
         FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeReal.addOwnedParameter(FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeReal_value);
         //Parameter errorStatus
         FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeReal_errorStatus.setName("errorStatus");
@@ -1673,7 +1673,7 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeBoolean.setName("writeBoolean");
         //Parameter value
         FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeBoolean_value.setName("value");
-        FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeBoolean_value.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_Boolean);
+        FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeBoolean_value.setType(PrimitiveTypesModel.instance().PrimitiveTypes_Boolean);
         FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeBoolean.addOwnedParameter(FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeBoolean_value);
         //Parameter errorStatus
         FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeBoolean_errorStatus.setName("errorStatus");
@@ -1685,7 +1685,7 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeUnlimitedNatural.setName("writeUnlimitedNatural");
         //Parameter value
         FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeUnlimitedNatural_value.setName("value");
-        FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeUnlimitedNatural_value.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_UnlimitedNatural);
+        FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeUnlimitedNatural_value.setType(PrimitiveTypesModel.instance().PrimitiveTypes_UnlimitedNatural);
         FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeUnlimitedNatural.addOwnedParameter(FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeUnlimitedNatural_value);
         //Parameter errorStatus
         FoundationalModelLibrary_BasicInputOutput_TextOutputChannel_writeUnlimitedNatural_errorStatus.setName("errorStatus");
@@ -1699,7 +1699,7 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_BasicInputOutput_WriteLine.isReentrant = false;
         //Parameter value
         FoundationalModelLibrary_BasicInputOutput_WriteLine_value.setName("value");
-        FoundationalModelLibrary_BasicInputOutput_WriteLine_value.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_String);
+        FoundationalModelLibrary_BasicInputOutput_WriteLine_value.setType(PrimitiveTypesModel.instance().PrimitiveTypes_String);
         FoundationalModelLibrary_BasicInputOutput_WriteLine.addOwnedParameter(FoundationalModelLibrary_BasicInputOutput_WriteLine_value);
         //Parameter errorStatus
         FoundationalModelLibrary_BasicInputOutput_WriteLine_errorStatus.setName("errorStatus");
@@ -1709,7 +1709,7 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         //ActivityParameterNode value
         FoundationalModelLibrary_BasicInputOutput_WriteLine_ActivityParameterNode_value.setName("value");
         FoundationalModelLibrary_BasicInputOutput_WriteLine_ActivityParameterNode_value.setParameter(FoundationalModelLibrary_BasicInputOutput_WriteLine_value);
-        FoundationalModelLibrary_BasicInputOutput_WriteLine_ActivityParameterNode_value.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_String);
+        FoundationalModelLibrary_BasicInputOutput_WriteLine_ActivityParameterNode_value.setType(PrimitiveTypesModel.instance().PrimitiveTypes_String);
         FoundationalModelLibrary_BasicInputOutput_WriteLine.addNode(FoundationalModelLibrary_BasicInputOutput_WriteLine_ActivityParameterNode_value);
         //ActivityParameterNode errorStatus
         FoundationalModelLibrary_BasicInputOutput_WriteLine_ActivityParameterNode_errorStatus.setName("errorStatus");
@@ -1734,7 +1734,7 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_BasicInputOutput_WriteLine_CallOperationAction_writeLine.setTarget(FoundationalModelLibrary_BasicInputOutput_WriteLine_CallOperationAction_writeLine_target);
         //InputPin value
         FoundationalModelLibrary_BasicInputOutput_WriteLine_CallOperationAction_writeLine_value.setName("value");
-        FoundationalModelLibrary_BasicInputOutput_WriteLine_CallOperationAction_writeLine_value.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_String);
+        FoundationalModelLibrary_BasicInputOutput_WriteLine_CallOperationAction_writeLine_value.setType(PrimitiveTypesModel.instance().PrimitiveTypes_String);
         FoundationalModelLibrary_BasicInputOutput_WriteLine_CallOperationAction_writeLine.addArgument(FoundationalModelLibrary_BasicInputOutput_WriteLine_CallOperationAction_writeLine_value);
         //OutputPin errorStatus
         FoundationalModelLibrary_BasicInputOutput_WriteLine_CallOperationAction_writeLine_errorStatus.setName("errorStatus");
@@ -1784,7 +1784,7 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_BasicInputOutput_ReadLine.isReentrant = false;
         //Parameter result
         FoundationalModelLibrary_BasicInputOutput_ReadLine_result.setName("result");
-        FoundationalModelLibrary_BasicInputOutput_ReadLine_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_String);
+        FoundationalModelLibrary_BasicInputOutput_ReadLine_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_String);
         FoundationalModelLibrary_BasicInputOutput_ReadLine_result.setDirection(ParameterDirectionKind.return_);
         FoundationalModelLibrary_BasicInputOutput_ReadLine.addOwnedParameter(FoundationalModelLibrary_BasicInputOutput_ReadLine_result);
         //Parameter errorStatus
@@ -1795,7 +1795,7 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         //ActivityParameterNode result
         FoundationalModelLibrary_BasicInputOutput_ReadLine_ActivityParameterNode_result.setName("result");
         FoundationalModelLibrary_BasicInputOutput_ReadLine_ActivityParameterNode_result.setParameter(FoundationalModelLibrary_BasicInputOutput_ReadLine_result);
-        FoundationalModelLibrary_BasicInputOutput_ReadLine_ActivityParameterNode_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_String);
+        FoundationalModelLibrary_BasicInputOutput_ReadLine_ActivityParameterNode_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_String);
         FoundationalModelLibrary_BasicInputOutput_ReadLine.addNode(FoundationalModelLibrary_BasicInputOutput_ReadLine_ActivityParameterNode_result);
         //ActivityParameterNode errorStatus
         FoundationalModelLibrary_BasicInputOutput_ReadLine_ActivityParameterNode_errorStatus.setName("errorStatus");
@@ -1820,7 +1820,7 @@ public class FoundationalModelLibraryModel extends InMemoryModel
         FoundationalModelLibrary_BasicInputOutput_ReadLine_CallOperationAction_readLine.setTarget(FoundationalModelLibrary_BasicInputOutput_ReadLine_CallOperationAction_readLine_target);
         //OutputPin result
         FoundationalModelLibrary_BasicInputOutput_ReadLine_CallOperationAction_readLine_result.setName("result");
-        FoundationalModelLibrary_BasicInputOutput_ReadLine_CallOperationAction_readLine_result.setType(PrimitiveTypesModel.Instance().PrimitiveTypes_String);
+        FoundationalModelLibrary_BasicInputOutput_ReadLine_CallOperationAction_readLine_result.setType(PrimitiveTypesModel.instance().PrimitiveTypes_String);
         FoundationalModelLibrary_BasicInputOutput_ReadLine_CallOperationAction_readLine.addResult(FoundationalModelLibrary_BasicInputOutput_ReadLine_CallOperationAction_readLine_result);
         //OutputPin errorStatus
         FoundationalModelLibrary_BasicInputOutput_ReadLine_CallOperationAction_readLine_errorStatus.setName("errorStatus");

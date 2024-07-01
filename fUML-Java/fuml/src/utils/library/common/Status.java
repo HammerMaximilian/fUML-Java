@@ -26,7 +26,7 @@ public class Status {
 	
 	static public DataType getStatusType() {
 		if (statusType == null) {
-			statusType = FoundationalModelLibraryModel.Instance().FoundationalModelLibrary_Common_Status;
+			statusType = FoundationalModelLibraryModel.instance().FoundationalModelLibrary_Common_Status;
 		}
 		return statusType;
 	}
