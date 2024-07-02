@@ -18,10 +18,16 @@ package utils.library.realfunctions;
 import java.util.List;
 
 import fuml.Debug;
+import utils.library.FoundationalModelLibraryModel;
 
 public class RealAbsFunctionBehaviorExecution extends
         RealFunctionBehaviorExecution {
 
+    public RealAbsFunctionBehaviorExecution()
+    {
+        types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Abs);
+    }
+	
     public Float doRealFunction(List<Float> arguments) {
     	
     	float arg1 = arguments.get(0);

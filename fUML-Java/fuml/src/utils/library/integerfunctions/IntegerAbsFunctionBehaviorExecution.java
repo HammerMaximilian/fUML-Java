@@ -16,10 +16,16 @@
 package utils.library.integerfunctions;
 
 import fuml.Debug;
+import utils.library.FoundationalModelLibraryModel;
 
 public class IntegerAbsFunctionBehaviorExecution extends
         IntegerFunctionBehaviorExecution {
 
+    public IntegerAbsFunctionBehaviorExecution()
+    {
+        types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Abs);
+    }
+	
     public Integer doIntegerFunction(UMLPrimitiveTypes.intList arguments) {
     	
     	int arg1 = arguments.getValue(0);

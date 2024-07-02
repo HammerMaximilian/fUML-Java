@@ -15,6 +15,7 @@
 
 package utils.library.unlimitednaturalfunctions;
 
+import utils.library.FoundationalModelLibraryModel;
 import utils.library.LibraryFunctions;
 
 import UMLPrimitiveTypes.UnlimitedNatural;
@@ -25,6 +26,11 @@ import fuml.semantics.simpleclassifiers.UnlimitedNaturalValue;
 public class UnlimitedNaturalToIntegerFunctionBehaviorExecution extends
 		fuml.semantics.commonbehavior.OpaqueBehaviorExecution {
 
+    public UnlimitedNaturalToIntegerFunctionBehaviorExecution()
+    {
+        types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToInteger);
+    }
+	
 	@Override
 	public void doBody(
 			fuml.semantics.commonbehavior.ParameterValueList inputParameters,

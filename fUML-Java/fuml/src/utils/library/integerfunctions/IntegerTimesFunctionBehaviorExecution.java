@@ -16,10 +16,16 @@
 package utils.library.integerfunctions;
 
 import fuml.Debug;
+import utils.library.FoundationalModelLibraryModel;
 
 public class IntegerTimesFunctionBehaviorExecution extends
         IntegerFunctionBehaviorExecution {
 
+    public IntegerTimesFunctionBehaviorExecution()
+    {
+        types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_times);
+    }
+	
     public Integer doIntegerFunction(UMLPrimitiveTypes.intList arguments) {
 
     	int i1 = arguments.getValue(0);

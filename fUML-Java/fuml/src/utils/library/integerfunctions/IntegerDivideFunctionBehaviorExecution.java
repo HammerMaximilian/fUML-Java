@@ -15,6 +15,7 @@
 
 package utils.library.integerfunctions;
 
+import utils.library.FoundationalModelLibraryModel;
 import utils.library.LibraryFunctions;
 
 import fuml.Debug;
@@ -24,6 +25,11 @@ import fuml.semantics.simpleclassifiers.RealValue;
 public class IntegerDivideFunctionBehaviorExecution extends
 		fuml.semantics.commonbehavior.OpaqueBehaviorExecution {
 
+    public IntegerDivideFunctionBehaviorExecution()
+    {
+        types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_divide);
+    }
+	
 	@Override
 	public void doBody(
 			fuml.semantics.commonbehavior.ParameterValueList inputParameters,

@@ -16,10 +16,16 @@
 package utils.library.integerfunctions;
 
 import fuml.Debug;
+import utils.library.FoundationalModelLibraryModel;
 
 public class IntegerMinFunctionBehaviorExecution extends
         IntegerFunctionBehaviorExecution {
 
+    public IntegerMinFunctionBehaviorExecution()
+    {
+        types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Min);
+    }
+	
     public Integer doIntegerFunction(UMLPrimitiveTypes.intList arguments) {
 
     	int i1 = arguments.getValue(0);

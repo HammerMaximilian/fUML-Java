@@ -15,6 +15,7 @@
 
 package utils.library.booleanfunctions;
 
+import utils.library.FoundationalModelLibraryModel;
 import utils.library.LibraryFunctions;
 
 import fuml.Debug;
@@ -24,6 +25,11 @@ import fuml.semantics.simpleclassifiers.StringValue;
 public class BooleanToStringFunctionBehaviorExecution extends
 		fuml.semantics.commonbehavior.OpaqueBehaviorExecution {
 
+    public BooleanToStringFunctionBehaviorExecution()
+    {
+        types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_ToString);
+    }
+	
 	@Override
 	public void doBody(
 			fuml.semantics.commonbehavior.ParameterValueList inputParameters,

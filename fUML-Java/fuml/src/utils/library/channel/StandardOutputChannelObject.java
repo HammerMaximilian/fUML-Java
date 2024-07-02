@@ -13,6 +13,7 @@
 
 package utils.library.channel;
 
+import utils.library.FoundationalModelLibraryModel;
 import utils.library.common.Status;
 
 import fuml.semantics.values.Value;
@@ -21,6 +22,11 @@ public class StandardOutputChannelObject extends TextOutputChannelObject {
 
 	private boolean opened = true; // S.C. 11/20/2008 - set default to 'true'
 
+	public StandardOutputChannelObject()
+	{
+		types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_BasicInputOutput_StandardOutputChannel);
+	}
+	
 	@Override
 	public String getName() {
 		return "StandardOutput";

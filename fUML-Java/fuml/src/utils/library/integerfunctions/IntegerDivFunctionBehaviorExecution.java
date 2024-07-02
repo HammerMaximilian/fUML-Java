@@ -16,10 +16,16 @@
 package utils.library.integerfunctions;
 
 import fuml.Debug;
+import utils.library.FoundationalModelLibraryModel;
 
 public class IntegerDivFunctionBehaviorExecution extends
         utils.library.integerfunctions.IntegerFunctionBehaviorExecution {
 
+    public IntegerDivFunctionBehaviorExecution()
+    {
+        types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_Div);
+    }
+	
     public Integer doIntegerFunction(UMLPrimitiveTypes.intList arguments) {
         // Compute the integer divide function.
     	

@@ -15,6 +15,7 @@
 
 package utils.library.stringfunctions;
 
+import utils.library.FoundationalModelLibraryModel;
 import utils.library.LibraryFunctions;
 
 import fuml.Debug;
@@ -24,6 +25,11 @@ import fuml.semantics.simpleclassifiers.StringValue;
 public class StringSubstringFunctionBehaviorExecution extends
         fuml.semantics.commonbehavior.OpaqueBehaviorExecution {
 
+    public StringSubstringFunctionBehaviorExecution()
+    {
+        types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Substring);
+    }
+	
 	@Override
     public void doBody(
             fuml.semantics.commonbehavior.ParameterValueList inputParameters,

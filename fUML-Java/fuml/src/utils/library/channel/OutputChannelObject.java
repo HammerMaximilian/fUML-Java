@@ -13,6 +13,7 @@
 
 package utils.library.channel;
 
+import utils.library.FoundationalModelLibraryModel;
 import utils.library.common.Status;
 import utils.library.libraryclass.OperationExecution;
 
@@ -20,6 +21,11 @@ import fuml.semantics.simpleclassifiers.BooleanValue;
 
 public abstract class OutputChannelObject extends ChannelObject {
 
+	public OutputChannelObject()
+	{
+		types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_BasicInputOutput_OutputChannel);
+	}
+	
     public abstract void write(fuml.semantics.values.Value value, Status errorStatus);
     public abstract boolean isFull();
 

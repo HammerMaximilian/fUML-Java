@@ -14,6 +14,7 @@
 
 package utils.library.listfunctions;
 
+import utils.library.FoundationalModelLibraryModel;
 import utils.library.LibraryFunctions;
 
 import fuml.Debug;
@@ -24,6 +25,11 @@ import fuml.semantics.values.ValueList;
 public class ListGetFunctionBehaviorExecution extends
         fuml.semantics.commonbehavior.OpaqueBehaviorExecution {
 
+    public ListGetFunctionBehaviorExecution()
+    {
+        types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_PrimitiveBehaviors_ListFunctions_ListGet);
+    }
+	
     public void doBody(
             fuml.semantics.commonbehavior.ParameterValueList inputParameters,
             fuml.semantics.commonbehavior.ParameterValueList outputParameters) {

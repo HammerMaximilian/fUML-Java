@@ -18,10 +18,16 @@ package utils.library.booleanfunctions;
 import java.util.List;
 
 import fuml.Debug;
+import utils.library.FoundationalModelLibraryModel;
 
 public class BooleanXorFunctionBehaviorExecution extends
 	BooleanFunctionBehaviorExecution {
 
+    public BooleanXorFunctionBehaviorExecution()
+    {
+        types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Xor);
+    }
+	
     @Override
 	public boolean doBooleanFunction(List<Boolean> arguments) {  
     	boolean result = arguments.get(0) ^ arguments.get(1);

@@ -15,6 +15,7 @@
 
 package utils.library.stringfunctions;
 
+import utils.library.FoundationalModelLibraryModel;
 import utils.library.LibraryFunctions;
 
 import fuml.Debug;
@@ -24,6 +25,11 @@ import fuml.semantics.simpleclassifiers.StringValue;
 public class StringSizeFunctionBehaviorExecution extends
         fuml.semantics.commonbehavior.OpaqueBehaviorExecution {
 
+    public StringSizeFunctionBehaviorExecution()
+    {
+        types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Size);
+    }
+	
 	@Override
     public void doBody(
             fuml.semantics.commonbehavior.ParameterValueList inputParameters,

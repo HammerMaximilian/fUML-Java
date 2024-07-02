@@ -15,6 +15,7 @@
 
 package utils.library.listfunctions;
 
+import utils.library.FoundationalModelLibraryModel;
 import utils.library.LibraryFunctions;
 
 import fuml.Debug;
@@ -24,6 +25,11 @@ import fuml.semantics.values.ValueList;
 public class ListSizeFunctionBehaviorExecution extends
         fuml.semantics.commonbehavior.OpaqueBehaviorExecution {
 
+    public ListSizeFunctionBehaviorExecution()
+    {
+        types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_PrimitiveBehaviors_ListFunctions_ListSize);
+    }
+	
 	@Override
     public void doBody(
             fuml.semantics.commonbehavior.ParameterValueList inputParameters,

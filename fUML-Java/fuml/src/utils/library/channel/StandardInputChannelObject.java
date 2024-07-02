@@ -12,6 +12,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import utils.library.FoundationalModelLibraryModel;
 import utils.library.common.Status;
 
 import UMLPrimitiveTypes.UnlimitedNatural;
@@ -21,6 +22,11 @@ import fuml.semantics.values.Value;
 public class StandardInputChannelObject extends TextInputChannelObject {
 	
 	BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+	
+	public StandardInputChannelObject()
+	{
+		types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_BasicInputOutput_StandardInputChannel);
+	}
 	
 	@Override
 	public String getName() {

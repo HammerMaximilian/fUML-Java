@@ -13,6 +13,7 @@
 
 package utils.library.channel;
 
+import utils.library.FoundationalModelLibraryModel;
 import utils.library.common.Status;
 import utils.library.libraryclass.OperationExecution;
 
@@ -21,6 +22,11 @@ import fuml.semantics.values.Value;
 
 public abstract class InputChannelObject extends ChannelObject {
 
+	public InputChannelObject()
+	{
+		types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_BasicInputOutput_InputChannel);
+	}
+	
     public abstract boolean hasMore();
     public abstract Value read(Status errorStatus);
     public abstract Value peek(Status errorStatus);

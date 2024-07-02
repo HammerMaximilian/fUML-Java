@@ -17,10 +17,16 @@ package utils.library.unlimitednaturalfunctions;
 
 import UMLPrimitiveTypes.intList;
 import fuml.Debug;
+import utils.library.FoundationalModelLibraryModel;
 
 public class UnlimitedNaturalGreaterThanEqualFunctionBehaviorExecution extends
         UnlimitedNaturalRelationalFunctionBehaviorExecution {
 
+    public UnlimitedNaturalGreaterThanEqualFunctionBehaviorExecution()
+    {
+        types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_greaterOrEqual);
+    }
+	
 	@Override
     public boolean doUnlimitedNaturalFunction(intList arguments) {
 		

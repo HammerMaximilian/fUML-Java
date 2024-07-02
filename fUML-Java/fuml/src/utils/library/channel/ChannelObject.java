@@ -13,6 +13,7 @@
 
 package utils.library.channel;
 
+import utils.library.FoundationalModelLibraryModel;
 import utils.library.common.Status;
 import utils.library.libraryclass.ImplementationObject;
 import utils.library.libraryclass.OperationExecution;
@@ -25,6 +26,11 @@ public abstract class ChannelObject extends ImplementationObject {
 	// NOTE: Initial status is not set here because this.locus will not be
 	// set when the object is first created.
 	protected Status status = null;
+	
+	public ChannelObject()
+	{
+		types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_BasicInputOutput_Channel);
+	}
 
     public abstract String getName();
     public abstract void open(Status errorStatus);

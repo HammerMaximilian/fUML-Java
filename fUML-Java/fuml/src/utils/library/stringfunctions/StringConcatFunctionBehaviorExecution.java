@@ -15,6 +15,7 @@
 
 package utils.library.stringfunctions;
 
+import utils.library.FoundationalModelLibraryModel;
 import utils.library.LibraryFunctions;
 
 import fuml.Debug;
@@ -23,6 +24,11 @@ import fuml.semantics.simpleclassifiers.StringValue;
 public class StringConcatFunctionBehaviorExecution extends
         fuml.semantics.commonbehavior.OpaqueBehaviorExecution {
 
+    public StringConcatFunctionBehaviorExecution()
+    {
+        types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_PrimitiveBehaviors_StringFunctions_Concat);
+    }
+	
 	@Override
     public void doBody(
             fuml.semantics.commonbehavior.ParameterValueList inputParameters,

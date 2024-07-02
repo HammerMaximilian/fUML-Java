@@ -8,6 +8,7 @@
 
 package utils.library.channel;
 
+import utils.library.FoundationalModelLibraryModel;
 import utils.library.common.Status;
 import utils.library.libraryclass.OperationExecution;
 
@@ -21,6 +22,11 @@ import fuml.semantics.simpleclassifiers.UnlimitedNaturalValue;
 
 public abstract class TextInputChannelObject extends InputChannelObject {
 
+	public TextInputChannelObject()
+	{
+		types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_BasicInputOutput_TextInputChannel);
+	}
+	
 	public abstract String readCharacter(Status errorStatus);
 	public abstract String peekCharacter(Status errorStatus);
 	public abstract String readLine(Status errorStatus);

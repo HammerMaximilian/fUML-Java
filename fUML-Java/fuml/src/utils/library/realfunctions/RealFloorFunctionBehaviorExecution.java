@@ -15,6 +15,7 @@
 
 package utils.library.realfunctions;
 
+import utils.library.FoundationalModelLibraryModel;
 import utils.library.LibraryFunctions;
 
 import fuml.Debug;
@@ -24,6 +25,11 @@ import fuml.semantics.simpleclassifiers.RealValue;
 public class RealFloorFunctionBehaviorExecution extends
 	fuml.semantics.commonbehavior.OpaqueBehaviorExecution {
 
+    public RealFloorFunctionBehaviorExecution()
+    {
+        types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Floor);
+    }
+	
     public void doBody(
             fuml.semantics.commonbehavior.ParameterValueList inputParameters,
             fuml.semantics.commonbehavior.ParameterValueList outputParameters) {

@@ -11,6 +11,7 @@
 
 package utils.library.channel;
 
+import utils.library.FoundationalModelLibraryModel;
 import utils.library.common.Status;
 import utils.library.libraryclass.OperationExecution;
 
@@ -23,6 +24,11 @@ import fuml.semantics.simpleclassifiers.UnlimitedNaturalValue;
 
 public abstract class TextOutputChannelObject extends OutputChannelObject {
 
+	public TextOutputChannelObject()
+	{
+		types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_BasicInputOutput_TextOutputChannel);
+	}
+	
     public abstract void writeString(String value, Status errorStatus);
     public abstract void writeNewLine(Status errorStatus);
 

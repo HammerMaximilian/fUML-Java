@@ -15,6 +15,7 @@
 
 package utils.library.unlimitednaturalfunctions;
 
+import utils.library.FoundationalModelLibraryModel;
 import utils.library.LibraryFunctions;
 
 import fuml.Debug;
@@ -24,6 +25,11 @@ import fuml.semantics.simpleclassifiers.UnlimitedNaturalValue;
 public class UnlimitedNaturalToStringFunctionBehaviorExecution extends
 		fuml.semantics.commonbehavior.OpaqueBehaviorExecution {
 
+    public UnlimitedNaturalToStringFunctionBehaviorExecution()
+    {
+        types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_ToString);
+    }
+	
 	public void doBody(
 			fuml.semantics.commonbehavior.ParameterValueList inputParameters,
 			fuml.semantics.commonbehavior.ParameterValueList outputParameters) {

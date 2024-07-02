@@ -18,10 +18,16 @@ package utils.library.realfunctions;
 import java.util.List;
 
 import fuml.Debug;
+import utils.library.FoundationalModelLibraryModel;
 
 public class RealMaxFunctionBehaviorExecution extends
         RealFunctionBehaviorExecution {
 
+    public RealMaxFunctionBehaviorExecution()
+    {
+        types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Max);
+    }
+	
     public Float doRealFunction(List<Float> arguments) {
 
     	float x1 = arguments.get(0);

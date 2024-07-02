@@ -16,10 +16,16 @@
 package utils.library.integerfunctions;
 
 import fuml.Debug;
+import utils.library.FoundationalModelLibraryModel;
 
 public class IntegerLessThanFunctionBehaviorExecution extends
         IntegerRelationalFunctionBehaviorExecution {
 
+    public IntegerLessThanFunctionBehaviorExecution()
+    {
+        types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_lessThan);
+    }
+	
     public boolean doIntegerFunction(UMLPrimitiveTypes.intList arguments) {
 
     	int i1 = arguments.getValue(0);

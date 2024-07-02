@@ -18,10 +18,16 @@ package utils.library.realfunctions;
 import java.util.List;
 
 import fuml.Debug;
+import utils.library.FoundationalModelLibraryModel;
 
 public class RealInverseFunctionBehaviorExecution extends
         RealFunctionBehaviorExecution {
 
+    public RealInverseFunctionBehaviorExecution()
+    {
+        types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_Inv);
+    }
+	
     public Float doRealFunction(List<Float> arguments) {
 
     	float x1 = arguments.get(0);

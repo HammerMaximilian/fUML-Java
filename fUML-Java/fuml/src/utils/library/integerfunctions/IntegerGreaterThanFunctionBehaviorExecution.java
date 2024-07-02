@@ -17,10 +17,16 @@
 package utils.library.integerfunctions;
 
 import fuml.Debug;
+import utils.library.FoundationalModelLibraryModel;
 
 public class IntegerGreaterThanFunctionBehaviorExecution extends
         IntegerRelationalFunctionBehaviorExecution {
 
+    public IntegerGreaterThanFunctionBehaviorExecution()
+    {
+        types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_greaterThan);
+    }
+	
     public boolean doIntegerFunction(UMLPrimitiveTypes.intList arguments) {
 
     	int i1 = arguments.getValue(0);

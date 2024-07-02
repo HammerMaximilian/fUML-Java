@@ -15,6 +15,7 @@
 
 package utils.library.integerfunctions;
 
+import utils.library.FoundationalModelLibraryModel;
 import utils.library.LibraryFunctions;
 
 import fuml.Debug;
@@ -24,6 +25,11 @@ import fuml.semantics.simpleclassifiers.StringValue;
 public class IntegerToIntegerFunctionBehaviorExecution extends
         fuml.semantics.commonbehavior.OpaqueBehaviorExecution {
 
+    public IntegerToIntegerFunctionBehaviorExecution()
+    {
+        types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_PrimitiveBehaviors_IntegerFunctions_ToInteger);
+    }
+	
     public void doBody(
             fuml.semantics.commonbehavior.ParameterValueList inputParameters,
             fuml.semantics.commonbehavior.ParameterValueList outputParameters) {

@@ -18,10 +18,16 @@ package utils.library.realfunctions;
 import java.util.List;
 
 import fuml.Debug;
+import utils.library.FoundationalModelLibraryModel;
 
 public class RealDivideFunctionBehaviorExecution extends
         RealFunctionBehaviorExecution {
 
+    public RealDivideFunctionBehaviorExecution()
+    {
+        types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_PrimitiveBehaviors_RealFunctions_divide);
+    }
+	
     public Float doRealFunction(List<Float> arguments) {
         // Compute the integer divide function.
     	

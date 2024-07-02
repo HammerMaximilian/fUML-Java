@@ -18,10 +18,16 @@ package utils.library.booleanfunctions;
 import java.util.List;
 
 import fuml.Debug;
+import utils.library.FoundationalModelLibraryModel;
 
 public class BooleanImpliesFunctionBehaviorExecution extends
 	BooleanFunctionBehaviorExecution {
 
+    public BooleanImpliesFunctionBehaviorExecution()
+    {
+        types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_PrimitiveBehaviors_BooleanFunctions_Implies);
+    }
+	
     public boolean doBooleanFunction(List<Boolean> arguments) {  
     	boolean b1 = arguments.get(0);
     	boolean b2 = arguments.get(1);

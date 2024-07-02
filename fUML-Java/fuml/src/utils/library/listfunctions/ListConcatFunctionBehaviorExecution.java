@@ -15,9 +15,15 @@ import fuml.Debug;
 import fuml.semantics.commonbehavior.OpaqueBehaviorExecution;
 import fuml.semantics.commonbehavior.ParameterValueList;
 import fuml.semantics.values.ValueList;
+import utils.library.FoundationalModelLibraryModel;
 
 public class ListConcatFunctionBehaviorExecution extends OpaqueBehaviorExecution {
 
+    public ListConcatFunctionBehaviorExecution()
+    {
+        types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_PrimitiveBehaviors_ListFunctions_ListConcat);
+    }
+	
 	@Override
     public void doBody(
             ParameterValueList inputParameters,

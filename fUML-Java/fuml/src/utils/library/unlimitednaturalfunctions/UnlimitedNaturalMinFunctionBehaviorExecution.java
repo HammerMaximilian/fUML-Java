@@ -17,10 +17,16 @@ package utils.library.unlimitednaturalfunctions;
 
 import UMLPrimitiveTypes.intList;
 import fuml.Debug;
+import utils.library.FoundationalModelLibraryModel;
 
 public class UnlimitedNaturalMinFunctionBehaviorExecution extends
         UnlimitedNaturalFunctionBehaviorExecution {
 
+    public UnlimitedNaturalMinFunctionBehaviorExecution()
+    {
+        types.add(FoundationalModelLibraryModel.instance().FoundationalModelLibrary_PrimitiveBehaviors_UnlimitedNaturalFunctions_Min);
+    }
+	
 	@Override
     public int doUnlimitedNaturalFunction(intList arguments) {
 		
