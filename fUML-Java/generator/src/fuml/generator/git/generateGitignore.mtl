@@ -1,0 +1,8 @@
+[comment encoding = UTF-8 /]
+[module generateGitignore('http://www.eclipse.org/uml2/5.0.0/UML')]
+
+[template public generateGitignore(any : OclAny)]
+[file ('.gitignore', false, 'UTF-8')]
+/bin/
+[/file]
+[/template]
