@@ -143,4 +143,15 @@ public class Object_ extends fuml.semantics.structuredclassifiers.ExtensionalVal
 		return types;
 	} // getTypes
 
+    public fuml.semantics.commonbehavior.Execution dispatch(
+    		uml.classification.Operation operation,
+            boolean isExplicitBaseClassCall)
+    {
+        // Extends Object_.Dispatch(Operation) by flag "isExplicitBaseClassCall"
+        // Propagate "isExplicitBaseClassCall" to DispatchStrategy.Dispatch
+
+        DispatchStrategy dispatchStrategy = (DispatchStrategy)locus.factory.getStrategy("dispatch");
+
+        return dispatchStrategy.dispatch(this, operation, isExplicitBaseClassCall);
+    } // dispatch
 } // Object

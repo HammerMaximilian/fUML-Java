@@ -111,5 +111,24 @@ public class Reference extends fuml.semantics.simpleclassifiers.StructuredValue 
 	public String toString() {
 		return "Reference to " + this.referent.toString();
 	} // toString
+	
+    public fuml.semantics.commonbehavior.Execution dispatch(
+    		uml.classification.Operation operation,
+            boolean isExplicitBaseClassCall)
+    {
+        // Extends Reference.Dispatch(Operation) by flag "isExplicitBaseClassCall"
+        // If "isExplicitBaseClassCall" is true, delegate to Object_.Dispatch(Operation, bool).
+        // Else, call standard method Dispatch(Operation) to maintain possible method overriding.
+
+        if(isExplicitBaseClassCall)
+        {
+            return (referent != null) ? referent.dispatch(operation, isExplicitBaseClassCall) : null;
+        }
+        else
+        {
+            return dispatch(operation);
+        }
+        
+    } // dispatch
 
 } // Reference

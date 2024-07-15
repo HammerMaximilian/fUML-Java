@@ -14,11 +14,14 @@
 
 package fuml.semantics.actions;
 
+import fuml.Debug;
 import fuml.semantics.commonbehavior.Execution;
 import fuml.semantics.structuredclassifiers.Reference;
 import fuml.semantics.values.Value;
 import uml.actions.CallOperationAction;
 import uml.classification.ParameterList;
+import uml.packages.Stereotype;
+import uml.packages.StereotypeList;
 
 public class CallOperationActionActivation extends
 		fuml.semantics.actions.CallActionActivation {
@@ -41,11 +44,30 @@ public class CallOperationActionActivation extends
 		// operation to it and return the resulting execution object.
 
 		CallOperationAction action = (CallOperationAction) (this.node);
+		boolean isExplicitBaseClassCall = isExplicitBaseClassCall(action);
 		Value target = this.takeTokens(action.target).getValue(0);
 
-		Execution execution;
+		Execution execution = null;
 		if (target instanceof Reference) {
-			execution = ((Reference) target).dispatch(action.operation);
+			
+			Reference reference = (Reference)target;
+			
+			try
+			{
+				if(!isExplicitBaseClassCall)
+				{
+					execution = reference.dispatch(action.operation); 
+				}
+				else
+				{
+					execution = reference.dispatch(action.operation, isExplicitBaseClassCall);
+				}
+			}
+			catch(IllegalStateException e)
+			{
+				Debug.println(e.getMessage());
+			}
+			
 		} else {
 			execution = null;
 		}
@@ -61,5 +83,21 @@ public class CallOperationActionActivation extends
 		
 		return ((CallOperationAction) (this.node)).operation.ownedParameter;
 	}
+	
+    public boolean isExplicitBaseClassCall(CallOperationAction callOperationAction)
+    {
+        StereotypeList appliedStereotypes = callOperationAction.appliedStereotype;
+        int i = 0;
+        boolean isExplicitBaseClassCall = false;
+        while (i < appliedStereotypes.size() && !isExplicitBaseClassCall)
+        {
+            Stereotype s = appliedStereotypes.getValue(i);
+            if (s.name.equals("ExplicitBaseClassCall"))
+            {
+                isExplicitBaseClassCall = true;
+            }
+        }
+        return isExplicitBaseClassCall;
+    }
 
 } // CallOperationActionActivation

@@ -45,4 +45,32 @@ public abstract class DispatchStrategy extends
 		return method;
 	}
 	
+	public fuml.semantics.commonbehavior.Execution dispatch(
+			fuml.semantics.structuredclassifiers.Object_ object_,
+			uml.classification.Operation operation,
+			boolean isExplicitBaseClassCall)
+	{
+		// Extends DispatchStrategy.Dispatch(Object_, Operation) by flag "isExplicitBaseClassCall"
+		// Propagate "isExplicitBaseClassCall" to DispatchStrategy.GetMethod
+
+		uml.commonbehavior.Behavior method = getMethod(object_, operation, isExplicitBaseClassCall);
+
+		if(method == null)
+		{
+            String message = "[error] Local variable 'method' was null in fuml.semantics.commonbehavior.Execution dispatch(fuml.semantics.structuredclassifiers.Object_, uml.classification.Operation, boolean)";
+            System.out.println(message);
+			throw new IllegalStateException(message);
+		}
+
+        return object_.locus.factory.createExecution(method, object_);
+	} // Dispatch
+
+	public uml.commonbehavior.Behavior getMethod(
+			fuml.semantics.structuredclassifiers.Object_ object_,
+			uml.classification.Operation operation,
+			boolean isExplicitBaseClassCall)
+	{
+		return getMethod(object_, operation);
+	} // GetMethod
+	
 } // DispatchStrategy
