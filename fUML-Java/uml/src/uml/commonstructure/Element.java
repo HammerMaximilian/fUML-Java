@@ -18,6 +18,7 @@ public abstract class Element
 	public uml.commonstructure.ElementList ownedElement = new uml.commonstructure.ElementList();
 	public uml.commonstructure.Element owner = null;
 	public uml.commonstructure.CommentList ownedComment = new uml.commonstructure.CommentList();
+	public uml.packages.StereotypeList appliedStereotype = new uml.packages.StereotypeList(); // PSCS-specific, Stereotypes are required in PSCS
 
 	protected void addOwnedElement(
 			uml.commonstructure.Element ownedElement) {
@@ -25,5 +26,18 @@ public abstract class Element
 		ownedElement.owner = this;
 
 	} // addOwnedElement
+	
+    public void applyStereotype(uml.packages.Stereotype stereotype) // PSCS-specific, Stereotypes are required in PSCS
+    {
+        if(!appliedStereotype.contains(stereotype))
+        {
+            appliedStereotype.add(stereotype);
+        }
+    }
+
+    public void unapplyStereotype(uml.packages.Stereotype stereotype) // PSCS-specific, Stereotypes are required in PSCS
+    {
+        appliedStereotype.remove(stereotype);
+    }
 
 } // Element
