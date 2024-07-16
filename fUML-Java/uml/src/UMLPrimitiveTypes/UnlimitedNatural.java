@@ -33,5 +33,21 @@ public class UnlimitedNatural {
 	public UnlimitedNatural() {
 		this.naturalValue = 0;
 	} // UnlimitedNatural
+	
+	@Override
+	public boolean equals(Object o)
+	{
+		if(o == this){
+			return true;
+		}
+		
+		if(!(o instanceof UnlimitedNatural)) {
+			return false;
+		}
+		
+		UnlimitedNatural uN = (UnlimitedNatural) o;
+		
+		return naturalValue == uN.naturalValue;
+	}
 
 } // UnlimitedNatural

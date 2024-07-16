@@ -88,7 +88,7 @@ public class SignatureBasedDispatchStrategy extends DispatchStrategy {
         // check all of it's base classes.
         if (method == null)
         {
-            ClassifierList general = type.general;
+            ClassifierList general = type.general();
 
             i = 1;
             while (method == null & i <= general.size())
@@ -150,7 +150,7 @@ public class SignatureBasedDispatchStrategy extends DispatchStrategy {
                     matches = ownedParameter.type == baseParameter.type;
                 }
                 matches = matches && (ownedParameter.multiplicityElement.lower == baseParameter.multiplicityElement.lower);
-                matches = matches && (ownedParameter.multiplicityElement.upper == baseParameter.multiplicityElement.upper);
+                matches = matches && (ownedParameter.multiplicityElement.upper.equals(baseParameter.multiplicityElement.upper));
                 matches = matches && (ownedParameter.direction == baseParameter.direction);
             }
         }
@@ -163,9 +163,9 @@ public class SignatureBasedDispatchStrategy extends DispatchStrategy {
         boolean isSpecialized = false;
 
         int i = 1;
-        while (isSpecialized == false && i <= specializedType.general.size())
+        while (isSpecialized == false && i <= specializedType.general().size())
         {
-            Classifier directBase = specializedType.general.getValue(i - 1);
+            Classifier directBase = specializedType.general().getValue(i - 1);
             isSpecialized = generalType == directBase;
 
             if (!isSpecialized)
