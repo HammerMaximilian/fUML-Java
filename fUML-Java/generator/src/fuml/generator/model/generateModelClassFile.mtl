@@ -69,15 +69,15 @@ public class [aPackage.getNameSanitized() + 'Model'/] extends InMemoryModel
 
 	private void initializeInMemoryModel()
 	{
-	[for (metaclassName : String | aPackage.allOwnedElements().eClass()->sortedBy(name).name.adjustMetaclassName()->select(s : String | supportedUMLMetaclasses()->includes(s))->asOrderedSet())]
+	[for (metaclassName : String | aPackage.allOwnedElements().eClass()->sortedBy(name).name->select(s : String | supportedUMLMetaclasses()->includes(s))->asOrderedSet())]
 		this.initialize[metaclassName/]_Instances();
 	[/for]
 	}
 
-[for (metaclassName : String | aPackage.allOwnedElements().eClass()->sortedBy(name).name.adjustMetaclassName()->select(s : String | supportedUMLMetaclasses()->includes(s))->asOrderedSet()) separator ('\n')]
+[for (metaclassName : String | aPackage.allOwnedElements().eClass()->sortedBy(name).name->select(s : String | supportedUMLMetaclasses()->includes(s))->asOrderedSet()) separator ('\n')]
 	private void initialize[metaclassName/]_Instances()
 	{
-	[for (anElement : Element | aPackage.allOwnedElements()->select(e : Element | e.eClass().name.adjustMetaclassName() = metaclassName))]
+	[for (anElement : Element | aPackage.allOwnedElements()->select(e : Element | e.eClass().name = metaclassName))]
 		// [anElement.eClass().name + ' ' + anElement.getFullQualifiedName()/]
 		[anElement.generatePublicMemberCreation()/]
 		[anElement.generateElementInitialization()/]
@@ -190,7 +190,7 @@ addToElementRepository("[anElement.getName()/]", [anElement.getFullNameSanitized
 [comment Apply stereotype <<ExplicitBaseClassCall>> (from profile ExtensionsProfile) /]
 [comment hard coded by now; TODO: implement sophisticated stereotype application mechanism /]
 [if (not aCallOperationAction.getAppliedStereotype('ExtensionsProfile::ExplicitBaseClassCall').oclIsUndefined())]
-[aCallOperationAction.getFullNameSanitized()/].ApplyStereotype(uml.extensionsprofile.ExtensionsProfileModel.Instance().Stereotype_ExplicitBaseClassCall);
+[aCallOperationAction.getFullNameSanitized()/].applyStereotype(utils.extensionsprofile.ExtensionsProfileModel.instance().Stereotype_ExplicitBaseClassCall);
 [/if]
 [/let]
 [/template]
@@ -889,7 +889,7 @@ addToElementRepository("[anElement.getName()/]", [anElement.getFullNameSanitized
 [comment Apply stereotype <<Create>> (only stereotype required by PSCS) /]
 [comment hard coded by now; TODO: implement sophisticated stereotype application mechanism /]
 	[if (not anOperation.getAppliedStereotype('StandardProfile::Create').oclIsUndefined())]
-[anOperation.getFullNameSanitized()/].ApplyStereotype(uml.standardprofile.StandardProfileModel.Instance().Stereotype_Create);
+[anOperation.getFullNameSanitized()/].applyStereotype(uml.standardprofile.StandardProfileModel.Instance().Stereotype_Create);
 	[/if]
 [/let]
 [/template]
@@ -1329,7 +1329,7 @@ addToElementRepository("[anElement.getName()/]", [anElement.getFullNameSanitized
 
 [template private generateNamedElementInitialization(aNamedElement : NamedElement) post(trim())]
 [comment Property 'NamedElement::name' /]
-[aNamedElement.getFullNameSanitized()/].setName("[aNamedElement.getName()/]");
+[aNamedElement.getFullNameSanitized()/].setName("[if(aNamedElement.oclIsKindOf(Operation))][aNamedElement.getRealName()/][else][aNamedElement.getName()/][/if]");
 [aNamedElement.getFullNameSanitized()/].setVisibility(VisibilityKind.[aNamedElement.visibility/]_);
 [/template]
 

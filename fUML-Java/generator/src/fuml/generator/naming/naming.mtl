@@ -24,9 +24,14 @@
 
 [query public getName(element : Element) : String = element._getName().substituteAll('"', '\\"')/]
 
+[query public getRealName(element : Element) : String = element._getRealName().substituteAll('"', '\\"')/]
 
 [query private _getName(element : Element) : String
 	= invoke('fuml.generator.services.NamingService', 'getName(org.eclipse.uml2.uml.Element)', Sequence{element})
+/]
+
+[query private _getRealName(element : Element) : String
+	= invoke('fuml.generator.services.NamingService', 'getRealName(org.eclipse.uml2.uml.Element)', Sequence{element})
 /]
 
 [query public getNameSanitized(element : Element) : String = element._getName().sanitize() /]
