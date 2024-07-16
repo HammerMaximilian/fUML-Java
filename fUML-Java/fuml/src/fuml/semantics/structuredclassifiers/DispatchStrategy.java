@@ -28,8 +28,17 @@ public abstract class DispatchStrategy extends
 		// Get the behavior for the given operation as determined by the type(s)
 		// of the given object, compile the behavior at the locus of the object,
 		// and return the resulting execution object.
+		
+		uml.commonbehavior.Behavior method = getMethod(object, operation, false);
 
-		return object.locus.factory.createExecution(this.getMethod(object, operation), object);
+		if(method == null)
+		{
+            String message = "[error] Local variable 'method' was null in fuml.semantics.commonbehavior.Execution dispatch(fuml.semantics.structuredclassifiers.Object_, uml.classification.Operation)";
+            System.out.println(message);
+			throw new IllegalStateException(message);
+		}
+
+		return object.locus.factory.createExecution(method, object);
 	} // dispatch
 
 	public uml.commonbehavior.Behavior getMethod(
