@@ -18,13 +18,16 @@ import uml.commonstructure.VisibilityKind;
 
 public abstract class Classifier extends uml.commonstructure.Type {
 
+	private boolean generalConstructed = false;
+	private boolean memberConstructed = false;
+	
 	public boolean isAbstract = false;
 	public uml.classification.GeneralizationList generalization = new uml.classification.GeneralizationList();
 	public uml.classification.FeatureList feature = new uml.classification.FeatureList();
 	public uml.commonstructure.NamedElementList inheritedMember = new uml.commonstructure.NamedElementList();
 	public uml.classification.PropertyList attribute = new uml.classification.PropertyList();
-	public uml.classification.ClassifierList general = new uml.classification.ClassifierList();
 	public boolean isFinalSpecialization = false;
+	protected uml.classification.ClassifierList general = new uml.classification.ClassifierList();
 
 	protected void addFeature(uml.classification.Feature feature) {
 		// Note: This operation should not be used directly to add Properties.
@@ -44,16 +47,20 @@ public abstract class Classifier extends uml.commonstructure.Type {
 		this.addOwnedElement(generalization);
 		this.generalization.addValue(generalization);
 		generalization._setSpecific(this);
-		this.general.addValue(generalization.general);
+		// In this implementation, generals are not added here
+        // See method "Classifier.general()" below for further explanation
+		//this.general.addValue(generalization.general);
 
-		NamedElementList inheritedMembers = this.inherit(generalization.general
+        // In this implementation, members of base classifiers are not inherited here
+        // See method "Classifier.member()" below for further explanation
+		/* NamedElementList inheritedMembers = this.inherit(generalization.general
 				.inheritableMembers(this));
 
 		for (int i = 0; i < inheritedMembers.size(); i++) {
 			NamedElement inheritedMember = inheritedMembers.getValue(i);
 			this.addMember(inheritedMember);
 			this.inheritedMember.addValue(inheritedMember);
-		}
+		}*/
 	} // addGeneralization
 
 	public void setIsAbstract(boolean isAbstract) {
@@ -99,5 +106,56 @@ public abstract class Classifier extends uml.commonstructure.Type {
 	public void setIsFinalSpecialization(boolean isFinalSpecialization) {
 		this.isFinalSpecialization = isFinalSpecialization;
 	} // setIsFinalSpecialization
+	
+    // When using the generator to create an executable model within this implementation
+    // the order in which classifiers are initialized and base classifiers are added (and thus, base members are inherited)
+    // is arbitrary.
+    // This can lead to base classifier members not being inherited as they are not yet created
+    // Because of that, in this implementation, base members are not inherited when a generalization is added (i.e. in method "addGeneralization").
+    // Instead, property "Namespace.member" is encapsulated and can be accessed by method "Namespace.member()".
+    // This method is overridden here to inherit all base members recursively when "Classifier.member()" is first invoked.
+    // This first invocation happens during model execution, i.e. after all model classifiers have been completely created.
+    @Override 
+    public NamedElementList member()
+    {
+        if (!memberConstructed)
+        {
+            for (Classifier c : general)
+            {
+            	c.member(); // This is only done to recursively construct member
+            	NamedElementList inheritedMembers = inherit(c.inheritableMembers(this));
 
+                for (NamedElement inheritedMember : inheritedMembers)
+                {
+                    addMember(inheritedMember);
+                    this.inheritedMember.add(inheritedMember);
+                }
+            }
+
+            memberConstructed = true;
+        }
+
+        return member;
+    } // member
+
+    // When using the generator to create an executable model within this implementation
+    // classifiers are initialized before generalizations.
+    // This leads to property "Generalization.general" being uninitialized when "Classifier.addGeneralization()" is called.
+    // Because of that, in this implementation, generals are not added when a generalization is added (i.e. in method "addGeneralization").
+    // Instead, property "Classifier.general" is encapsulated and can be accessed by method "Classifier.general()".
+    // This first invocation should happen after all model elements have been completely initialized.
+    public ClassifierList general()
+    {
+        if (!generalConstructed)
+        {
+            for (Generalization g : generalization)
+            {
+            	this.general.addValue(g.general);
+            }
+
+            generalConstructed = true;
+        }
+
+        return general;
+    } // general
 } // Classifier

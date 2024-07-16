@@ -113,7 +113,7 @@ public abstract class Value extends fuml.semantics.loci.SemanticVisitor {
 		// Check if the given classifier matches any of the direct or indirect
 		// ancestors of a given type.
 
-		ClassifierList directParents = type.general;
+		ClassifierList directParents = type.general();
 		boolean matched = false;
 		int i = 1;
 		while (!matched & i <= directParents.size()) {

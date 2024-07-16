@@ -12,6 +12,9 @@
 
 package uml.structuredclassifiers;
 
+import uml.classification.Classifier;
+import uml.classification.ClassifierList;
+import uml.classification.Generalization;
 import uml.classification.RedefinableElement;
 import uml.classification.RedefinableElementList;
 import uml.commonstructure.NamedElement;
@@ -20,26 +23,31 @@ import uml.commonstructure.NamedElementList;
 public class Class_ extends
 		uml.commonbehavior.BehavioredClassifier {
 
+	private boolean superClassConstructed = false;
+	
 	public uml.classification.OperationList ownedOperation = new uml.classification.OperationList();
 	public boolean isActive = false;
 	public uml.simpleclassifiers.ReceptionList ownedReception = new uml.simpleclassifiers.ReceptionList();
 	public uml.classification.PropertyList ownedAttribute = new uml.classification.PropertyList();
 	public uml.classification.ClassifierList nestedClassifier = new uml.classification.ClassifierList();
 	public boolean isID = false;
-	public uml.structuredclassifiers.Class_List superClass = new uml.structuredclassifiers.Class_List();
+	
+	protected uml.structuredclassifiers.Class_List superClass = new uml.structuredclassifiers.Class_List();
 
 	public void setIsActive(boolean isActive) {
 		this.isActive = isActive;
 	} // setIsActive
 
-	public void addGeneralization(
+	// In this implementation, superClasses are not added here
+    // See method "Class_.superClass()" below or "Classifier.general()" for further explanation
+	/*public void addGeneralization(
 			uml.classification.Generalization generalization) {
 		super.addGeneralization(generalization);
 
 		if (generalization.general instanceof Class_) {
 			this.superClass.addValue((Class_) generalization.general);
 		}
-	} // addGeneralization
+	}*/ // addGeneralization
 
 	public void addOwnedAttribute(
 			uml.classification.Property ownedAttribute) {
@@ -113,4 +121,21 @@ public class Class_ extends
 		this.nestedClassifier.addValue(nestedClassifier);
 	} // addNestedClassifier
 
+    // See method "Classifier::general()" for further explanation.
+    public Class_List superClass()
+    {
+        if (!superClassConstructed)
+        {
+            for (Classifier c : general())
+            {
+            	if (c instanceof Class_) {
+        			this.superClass.addValue((Class_) c);
+        		}
+            }
+
+            superClassConstructed = true;
+        }
+
+        return superClass;
+    } // superClass
 } // Class

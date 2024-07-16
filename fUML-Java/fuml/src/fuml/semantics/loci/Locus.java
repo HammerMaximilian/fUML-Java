@@ -132,8 +132,8 @@ public class Locus {
 			doesConform = true;
 		} else {
 			int i = 1;
-			while (!doesConform & i <= type.general.size()) {
-				doesConform = this.conforms(type.general.getValue(i - 1),
+			while (!doesConform & i <= type.general().size()) {
+				doesConform = this.conforms(type.general().getValue(i - 1),
 						classifier);
 				i = i + 1;
 			}

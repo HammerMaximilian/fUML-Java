@@ -18,7 +18,10 @@ package uml.commonstructure;
 public abstract class Namespace extends
 		uml.commonstructure.PackageableElement {
 
-	public uml.commonstructure.NamedElementList member = new uml.commonstructure.NamedElementList();
+	// Property "member" is encapsulated here an can be accessed via method "member()"
+	// See Classifier.java for further information
+	protected uml.commonstructure.NamedElementList member = new uml.commonstructure.NamedElementList();
+	
 	public uml.commonstructure.NamedElementList ownedMember = new uml.commonstructure.NamedElementList();
 	public uml.commonstructure.ElementImportList elementImport = new uml.commonstructure.ElementImportList();
 	public uml.commonstructure.PackageImportList packageImport = new uml.commonstructure.PackageImportList();
@@ -76,4 +79,8 @@ public abstract class Namespace extends
 		this.importedMember.addValue(importedMember);
 	} // addImportedMember
 
+    public NamedElementList member()
+    {
+        return member;
+    }
 } // Namespace

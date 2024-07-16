@@ -84,7 +84,7 @@ public abstract class StructuredValue extends
 		StructuralFeatureList memberFeatures = new StructuralFeatureList();
 		
 		if (type != null) {
-			NamedElementList members = type.member;
+			NamedElementList members = type.member();
 			for (int i = 0; i < features.size(); i++) {
 				StructuralFeature feature = features.getValue(i);
 				Boolean isMember = false;
@@ -141,7 +141,7 @@ public abstract class StructuredValue extends
 		// Add features for the structural features of the supertypes
 		// of the given type. (Note that the features for supertypes
 		// always come after the owned features.)
-		ClassifierList supertypes = type.general;		
+		ClassifierList supertypes = type.general();		
 		for (int i = 0; i < supertypes.size(); i++) {
 			Classifier supertype = supertypes.getValue(i);
 			StructuralFeatureList supertypeFeatures = this.getStructuralFeaturesForType(supertype);

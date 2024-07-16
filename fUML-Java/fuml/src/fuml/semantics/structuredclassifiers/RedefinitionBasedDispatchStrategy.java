@@ -35,7 +35,7 @@ Behavior method = null;
 int i = 1;
 while (method == null & i <= object.types.size()) {
 	Class_ type = object.types.getValue(i - 1);
-	NamedElementList members = type.member;
+	NamedElementList members = type.member();
 	int j = 1;
 	while (method == null & j <= members.size()) {
 		NamedElement member = members.getValue(j - 1);

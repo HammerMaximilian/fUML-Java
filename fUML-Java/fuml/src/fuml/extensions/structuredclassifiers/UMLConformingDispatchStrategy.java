@@ -91,9 +91,9 @@ public class UMLConformingDispatchStrategy extends RedefinitionBasedDispatchStra
         else
         {
             int i = 1;
-            while (conformsTo == false && i <= type.general.size())
+            while (conformsTo == false && i <= type.general().size())
             {
-                Classifier general = type.general.getValue(i - 1);
+                Classifier general = type.general().getValue(i - 1);
                 conformsTo = conformsTo(general, otherType);
                 i++;
             }
