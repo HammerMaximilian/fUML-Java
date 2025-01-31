@@ -17,6 +17,8 @@ import uml.simpleclassifiers.Interface;
 
 public class Operation extends uml.classification.BehavioralFeature {
 
+	private boolean typeConstructed = false;
+	
 	public boolean isQuery = false;
 	public boolean isOrdered = false;
 	public boolean isUnique = true;
@@ -24,7 +26,7 @@ public class Operation extends uml.classification.BehavioralFeature {
 	public UnlimitedNatural upper = null;
 	public uml.structuredclassifiers.Class_ class_ = null;
 	public uml.classification.OperationList redefinedOperation = new uml.classification.OperationList();
-	public uml.commonstructure.Type type = null;
+	protected uml.commonstructure.Type type = null;
 	public uml.classification.ParameterList ownedParameter = new uml.classification.ParameterList();
 	public Interface interface_ = null; // PSCS-specific
 	
@@ -72,6 +74,34 @@ public class Operation extends uml.classification.BehavioralFeature {
     {
         this.interface_ = interface_;
         _setNamespace(interface_);
+    }
+    
+    // When using the generator to create an executable model within this implementation
+    // the order in which operations and their parameters are initialized is arbitrary.
+    // This can lead to operations having no type, because the return parameter was
+    // not yet initialized when it was added to ownedParameter.
+    // Because of that, in this implementation, "Operation.type" is encapsulated.
+    // Instead, method "Operation::type()" should be used, which will iterate over all owned parameters
+    // the first time it is called and determine the Operation's type (if existing).
+    // This first invocation happens during model execution, i.e. after all model elements have been completely created.
+    public uml.commonstructure.Type type()
+    {
+    	if(!typeConstructed)
+    	{
+    		if(type == null)
+    		{
+    			for(Parameter parameter : ownedParameter)
+    			{
+    				if(parameter.direction == ParameterDirectionKind.return_)
+    				{
+    					this.type = parameter.type;
+    				}
+    			}
+    		}
+    		
+    		typeConstructed = true;
+    	}
+    	return type;
     }
 	
 } // Operation
