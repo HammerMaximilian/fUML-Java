@@ -39,7 +39,7 @@ public class CS_DefaultConstructStrategy extends CS_ConstructStrategy {
     public Object_ construct(Operation constructor, CS_Object context)
     {
         locus = context.locus;
-        return constructObject(context, (Class_)constructor.type);
+        return constructObject(context, (Class_)constructor.type());
     }
 
     public Object_ constructObject(CS_Object context, Class_ type)
