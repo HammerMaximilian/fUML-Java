@@ -49,5 +49,12 @@ public class UnlimitedNatural {
 		
 		return naturalValue == uN.naturalValue;
 	}
+	
+	@Override
+    public String toString()
+    {
+        if (naturalValue >= 0) return String.valueOf(naturalValue);
+        else return "*";
+    }
 
 } // UnlimitedNatural
