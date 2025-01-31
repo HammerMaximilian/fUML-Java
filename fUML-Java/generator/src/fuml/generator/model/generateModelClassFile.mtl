@@ -1010,6 +1010,7 @@ addToElementRepository("[anElement.getName()/]", [anElement.getFullNameSanitized
 
 [template private generateElementInitialization(anElement : Element) ? (anElement.oclIsKindOf(Trigger)) post(trim())]
 [let aTrigger : Trigger = anElement.oclAsType(Trigger)]
+// [aTrigger.eClass().name + ' ' + aTrigger.getName()/]
 [aTrigger.generateNamedElementInitialization()/]
 [comment Property 'Trigger::event' /]
 	[if (not (aTrigger.event.oclIsUndefined()))]
