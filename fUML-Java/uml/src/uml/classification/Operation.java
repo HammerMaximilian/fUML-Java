@@ -13,6 +13,7 @@
 package uml.classification;
 
 import UMLPrimitiveTypes.*;
+import uml.simpleclassifiers.Interface;
 
 public class Operation extends uml.classification.BehavioralFeature {
 
@@ -25,7 +26,8 @@ public class Operation extends uml.classification.BehavioralFeature {
 	public uml.classification.OperationList redefinedOperation = new uml.classification.OperationList();
 	public uml.commonstructure.Type type = null;
 	public uml.classification.ParameterList ownedParameter = new uml.classification.ParameterList();
-
+	public Interface interface_ = null; // PSCS-specific
+	
 	public void setIsQuery(boolean isQuery) {
 		this.isQuery = isQuery;
 	} // setIsQuery
@@ -63,6 +65,13 @@ public class Operation extends uml.classification.BehavioralFeature {
 
 	public void _setClass(uml.structuredclassifiers.Class_ class_) {
 		this.class_ = class_;
+		_setNamespace(class_);
 	} // _setClass
 
+    public void _setInterface(Interface interface_) // PSCS-specific
+    {
+        this.interface_ = interface_;
+        _setNamespace(interface_);
+    }
+	
 } // Operation

@@ -16,6 +16,7 @@ public abstract class InvocationAction extends
 		uml.actions.Action {
 
 	public uml.actions.InputPinList argument = new uml.actions.InputPinList();
+	public uml.structuredclassifiers.Port onPort = null; // PSCS-specific
 
 	public void addArgument(uml.actions.InputPin argument) {
 		super.addInput(argument);

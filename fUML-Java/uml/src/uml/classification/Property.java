@@ -12,8 +12,12 @@
 
 package uml.classification;
 
+import uml.commonstructure.ConnectableElement;
+import uml.simpleclassifiers.Interface;
+
 public class Property extends uml.classification.StructuralFeature {
 
+	public ConnectableElement connectableElement = new ConnectableElement(); // PSCS-specific ; NOTE: class ConnectableElement can not be abstract here
 	public boolean isDerived = false;
 	public boolean isReadOnly = false;
 	public boolean isDerivedUnion = false;
@@ -26,6 +30,7 @@ public class Property extends uml.classification.StructuralFeature {
 	public uml.classification.Property opposite = null;
 	public uml.values.ValueSpecification defaultValue = null;
 	public boolean isID = false;
+	public Interface interface_ = null; // PSCS-specific
 
 	public void setIsReadOnly(boolean isReadOnly) {
 		this.isReadOnly = isReadOnly;
@@ -49,6 +54,12 @@ public class Property extends uml.classification.StructuralFeature {
 	public void _setDatatype(uml.simpleclassifiers.DataType datatype) {
 		this.datatype = datatype;
 	} // _setDataType
+	
+    public void _setInterface(Interface interface_) // PSCS-specific
+    {
+        this.interface_ = interface_;
+        _setNamespace(interface_);
+    }
 
 	public void setIsID(boolean isID) {
 		this.isID = isID;
