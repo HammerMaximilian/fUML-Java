@@ -1,6 +1,6 @@
-<img src="logo.png" width="300"/>
+<img src="logo.png" width="264"/>
 
-# fUML/PSCS Reference Implementation for *Java*
+# fUML Reference Implementation for *Java*
 This software is an open source reference implementation of the *Semantics of a Foundational Subset for Executable UML Models* (fUML)  specifications by the *Object Management Group* (OMG) (see [fUML](https://www.omg.org/spec/FUML/1.5/About-FUML)). The fUML implementation of this software is a ont-on-one port of the original Java fUML reference implementation developed by
 *Model Driven Solutions* (see [https://github.com/ModelDriven/fUML-Reference-Implementation](https://github.com/ModelDriven/fUML-Reference-Implementation))
 
@@ -10,7 +10,6 @@ For licensing information, please see the [LICENSE.md](https://github.com/Hammer
 ## Prerequisites
 For detailed information, please see the [User Guide](fUML-Java_User_Guide.pdf) section *1. Prerequisites*.
 ### 1. Required Software
-* Compiler: *GCC* (Linux) or *MinGW-w64* (Windows)
 * *Java Runtime Environment*
 * *Eclipse IDE for Java Developers*
 ### 2. Recommended but optional Software
