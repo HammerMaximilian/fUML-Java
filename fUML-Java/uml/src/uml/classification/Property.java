@@ -60,6 +60,11 @@ public class Property extends uml.classification.StructuralFeature {
         this.interface_ = interface_;
         _setNamespace(interface_);
     }
+    
+    public void setDefaultValue(uml.values.ValueSpecification defaultValue)
+    {
+        this.defaultValue = defaultValue;
+    } // SetDefaultValue
 
 	public void setIsID(boolean isID) {
 		this.isID = isID;
