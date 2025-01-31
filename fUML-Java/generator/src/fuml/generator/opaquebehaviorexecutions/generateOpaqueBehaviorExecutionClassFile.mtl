@@ -1,0 +1,88 @@
+[comment encoding = UTF-8 /]
+[module generateOpaqueBehaviorExecutionClassFile('http://www.eclipse.org/uml2/5.0.0/UML')]
+
+[import fuml::generator::globalconstants::globalconstants /]
+[import fuml::generator::naming::naming /]
+
+[template public generateOpaqueBehaviorExecutionClassFile(anOpaqueBehavior : OpaqueBehavior)]
+[file (sourceDirectoryPath() + anOpaqueBehavior.getRootPackage().getNameSanitized() + '/' + anOpaqueBehavior.getNameSanitized() + 'Execution.java', false, 'UTF-8')]
+/*
+ * [anOpaqueBehavior.getNameSanitized() + 'Execution.java'/]
+ * 
+ * Auto-generated file
+ */
+package [anOpaqueBehavior.getRootPackage().getNameSanitized()/];
+
+[for (usingStatement : String | 
+	anOpaqueBehavior.getOpaqueBehaviorExecutionUsingsFromModel()
+	->including('import fuml.semantics.commonbehavior.OpaqueBehaviorExecution;\r\n')
+	->including('import fuml.semantics.commonbehavior.ParameterValueList;\r\n')
+	->including('import fuml.semantics.values.Value;\r\n')
+	->asOrderedSet())]
+[usingStatement/]
+[/for]
+
+/* [protected (': User-defined imports')]
+ * This section may be used for imports.
+ * It will not be overwritten by future generation processes.
+ */
+
+/*
+ * [/protected]
+ */
+
+public class [anOpaqueBehavior.getNameSanitized()/]Execution extends OpaqueBehaviorExecution
+{
+	public [anOpaqueBehavior.getNameSanitized()/]Execution()
+	{
+		types.add([anOpaqueBehavior.getRootPackage().getNameSanitized() + 'Model.instance().' + anOpaqueBehavior.getFullName()/]);
+		/* [protected (': Additional opaque behavior execution initializations')]
+	 	 * This section may be used to do any additional opaque behavior execution initialization,
+		 * for example initializing user-defined members.
+	 	 * It will not be overwritten by future generation processes.
+	 	 */
+	
+		/*
+	 	 * [/protected]
+	 	 */
+	}
+
+	@Override
+	public void doBody(ParameterValueList inputParameters, ParameterValueList outputParameters)
+	{
+		[if (anOpaqueBehavior.language->includes('Java') and anOpaqueBehavior._body->size() >= anOpaqueBehavior.language->size())]
+		[anOpaqueBehavior._body->at(anOpaqueBehavior.language->indexOf('Java'))/]
+		[/if]
+	}
+
+	@Override
+	protected Value new_()
+	{
+		return new [anOpaqueBehavior.getNameSanitized() + 'Execution'/]();
+	}	
+
+	/* [protected (': User-defined members')]
+	 * This section may be used for user-defined members.
+	 * It will not be overwritten by future generation processes.
+	 */
+
+	/*
+	 * [/protected]
+	 */
+} // [anOpaqueBehavior.getNameSanitized()/]Execution
+[/file]
+[/template]
+
+[query private getRootPackage(anElement : Element) : Package = 
+	if(anElement.getNearestPackage().isRootPackage())
+		then anElement.getNearestPackage()
+	else anElement.getNearestPackage().getRootPackage()
+	endif /]
+[query private isRootPackage(aPackage : Package) : Boolean = aPackage.nestingPackage = null /]
+
+[query private getOpaqueBehaviorExecutionUsingsFromModel(anOpaqueBehavior : OpaqueBehavior) : Set(String) =
+	if(anOpaqueBehavior.language->includes('Import') and anOpaqueBehavior._body->size() >= anOpaqueBehavior.language->size())
+	then anOpaqueBehavior._body->at(anOpaqueBehavior.language->indexOf('Import')).tokenize('\n').tokenize('\r\n')->asSet()
+	else Set(String){}
+	endif
+/]
