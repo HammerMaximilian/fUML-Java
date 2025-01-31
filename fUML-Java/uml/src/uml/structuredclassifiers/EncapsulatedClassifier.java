@@ -4,7 +4,7 @@ public class EncapsulatedClassifier extends StructuredClassifier
 {
     public PortList ownedPort = new PortList();
 
-    public void AddOnwedPort(Port ownedPort)
+    public void addOnwedPort(Port ownedPort)
     {
         if (ownedPort == null)
         {
