@@ -889,7 +889,7 @@ addToElementRepository("[anElement.getName()/]", [anElement.getFullNameSanitized
 [comment Apply stereotype <<Create>> (only stereotype required by PSCS) /]
 [comment hard coded by now; TODO: implement sophisticated stereotype application mechanism /]
 	[if (not anOperation.getAppliedStereotype('StandardProfile::Create').oclIsUndefined())]
-[anOperation.getFullNameSanitized()/].applyStereotype(uml.standardprofile.StandardProfileModel.Instance().Stereotype_Create);
+[anOperation.getFullNameSanitized()/].applyStereotype(utils.standardprofile.StandardProfileModel.Instance().Stereotype_Create);
 	[/if]
 [/let]
 [/template]
