@@ -1,4 +1,4 @@
-package pscs.environment;
+package utils.environmentpscs;
 
 import fuml.Debug;
 import pscs.semantics.actions.CS_DefaultConstructStrategy;
