@@ -5,7 +5,7 @@ This software is an open source reference implementation of the *Semantics of a 
 *Model Driven Solutions* (see [https://github.com/ModelDriven/fUML-Reference-Implementation](https://github.com/ModelDriven/fUML-Reference-Implementation))
 
 ## Licensing
-For licensing information, please see the [LICENSE.md](https://github.com/HammerMaximilian/fUML-Java/blob/master/LICENSE) file.
+For licensing information, please see the [LICENSE](LICENSE) file.
 
 ## Prerequisites
 For detailed information, please see the [User Guide](fUML-Java_User_Guide.pdf) section *1. Prerequisites*.
