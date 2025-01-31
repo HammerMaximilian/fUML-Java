@@ -9,7 +9,7 @@ public class Connector extends Feature // PSCS-specific
     public Association type = null;
     public ConnectorList redefinedConnector = new ConnectorList();
 
-    public void AddEnd(ConnectorEnd end)
+    public void addEnd(ConnectorEnd end)
     {
         if (end == null)
         {
@@ -20,12 +20,12 @@ public class Connector extends Feature // PSCS-specific
         this.end.add(end);
     }
 
-    public void SetType(Association type)
+    public void setType(Association type)
     {
         this.type = type;
     }
 
-    public void AddRedefinedConnector(Connector redefinedConnector)
+    public void addRedefinedConnector(Connector redefinedConnector)
     {
         if (redefinedConnector == null)
         {

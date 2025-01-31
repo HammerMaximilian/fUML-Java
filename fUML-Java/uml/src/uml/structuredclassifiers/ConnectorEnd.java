@@ -8,7 +8,7 @@ public class ConnectorEnd extends MultiplicityElement // PSCS-specific
     public Property role = null; // 'role' must be of type Property here since there is no multiple inheritance
     public Property partWithPort = null;
 
-    public void SetRole(Property role)
+    public void setRole(Property role)
     {
         this.role = role;
         role.connectableElement.end.add(this);
