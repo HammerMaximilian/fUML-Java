@@ -24,30 +24,27 @@ delegation and assembly connectors.</body>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_oX4GIRkAEe-JLYJU6luPjg" name="v" visibility="public" effect="create">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </ownedParameter>
-          <language>C#</language>
-          <language>Using</language>
-          <body>Console.WriteLine(&quot;Asserting b.a.v == 4&quot;);&#xD;
+          <language>Java</language>
+          <language>Import</language>
+          <body>System.out.println(&quot;Asserting b.a.v == 4&quot;);&#xD;
 &#xD;
 	// Test parameter v&#xD;
-	int v = ((IntegerValue)inputParameters.ElementAt(0).values.ElementAt(0)).value;&#xD;
-	Debug.Println(&quot;[doBody] argument v = &quot; + v);&#xD;
+	int v = ((IntegerValue)inputParameters.get(0).values.get(0)).value;&#xD;
+	Debug.println(&quot;[doBody] argument v = &quot; + v);&#xD;
 	&#xD;
-	Console.WriteLine(&quot;b.a.v == &quot; + v);&#xD;
-	Console.Write(&quot;Signal correctly sent and received: &quot;);&#xD;
+	System.out.println(&quot;b.a.v == &quot; + v);&#xD;
+	System.out.print(&quot;Signal correctly sent and received: &quot;);&#xD;
 &#xD;
 	if(v == 4)&#xD;
 	{&#xD;
-		Console.ForegroundColor = ConsoleColor.Green;&#xD;
-		Console.WriteLine(&quot;Assertion successful.&quot;);&#xD;
+		System.out.println(&quot;\u001B[32m&quot; + &quot;Assertion successful.&quot; + &quot;\u001B[0m&quot;);&#xD;
 	}&#xD;
 	else&#xD;
 	{&#xD;
-		Console.ForegroundColor = ConsoleColor.Red;&#xD;
-		Console.WriteLine(&quot;Assertion failed!&quot;);&#xD;
-	}&#xD;
-&#xD;
-	Console.ResetColor();</body>
-          <body>using fuml.semantics.simpleclassifiers;</body>
+		System.out.println(&quot;\u001B[31m&quot; + &quot;Assertion failed!&quot; + &quot;\u001B[0m&quot;);&#xD;
+	}</body>
+          <body>import fuml.semantics.simpleclassifiers.IntegerValue;&#xD;
+import fuml.Debug;</body>
         </ownedBehavior>
         <edge xmi:type="uml:ObjectFlow" xmi:id="_N-38oBkBEe-JLYJU6luPjg" target="_J7XD4BkBEe-JLYJU6luPjg" source="_A4mp8BkBEe-JLYJU6luPjg">
           <guard xmi:type="uml:LiteralBoolean" xmi:id="_N-81IBkBEe-JLYJU6luPjg" value="true"/>

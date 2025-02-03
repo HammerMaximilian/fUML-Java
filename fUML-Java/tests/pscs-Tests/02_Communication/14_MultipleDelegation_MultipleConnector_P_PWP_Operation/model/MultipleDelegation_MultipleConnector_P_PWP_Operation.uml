@@ -122,11 +122,11 @@ to a particular connector, expressed between a port and a part with port.</body>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_aOGeERdKEe-_2KaUB-6_dw" name="p" visibility="public" effect="create">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
-        <language>C#</language>
-        <language>Using</language>
+        <language>Java</language>
+        <language>Import</language>
         <body>if(index == 1)&#xD;
 	{&#xD;
-		Console.WriteLine(&quot;Asserting c.a1.b.p == 4 || c.a2.b.p == 4 || c.a3.b.p == 4 || c.a4.b.c == 4&quot;);&#xD;
+		System.out.println(&quot;Asserting c.a1.b.p == 4 || c.a2.b.p == 4 || c.a3.b.p == 4 || c.a4.b.c == 4&quot;);&#xD;
 	}&#xD;
 &#xD;
 	// For some reason, during the first execution of the expansion region, its body is actually executed twice.&#xD;
@@ -134,35 +134,31 @@ to a particular connector, expressed between a port and a part with port.</body>
 	if (index &lt;= MAX_INDEX)&#xD;
 	{&#xD;
 		// Test parameter p&#xD;
-                int p = ((IntegerValue)inputParameters.ElementAt(0).values.ElementAt(0)).value;&#xD;
-		Debug.Println(&quot;[doBody] argument p = &quot; + p);&#xD;
+                int p = ((IntegerValue)inputParameters.get(0).values.get(0)).value;&#xD;
+		Debug.println(&quot;[doBody] argument p = &quot; + p);&#xD;
 	&#xD;
-		Console.WriteLine( &quot;c.a&quot; + index + &quot;.b.p == &quot; + p);&#xD;
+		System.out.println( &quot;c.a&quot; + index + &quot;.b.p == &quot; + p);&#xD;
 		success = success || (p == 4);&#xD;
 &#xD;
 		if (index == MAX_INDEX)&#xD;
 		{&#xD;
 &#xD;
-			Console.Write(&quot;Operation call delegated: &quot;);&#xD;
+			System.out.print(&quot;Operation call delegated: &quot;);&#xD;
 &#xD;
 			if (success)&#xD;
 			{&#xD;
-				Console.ForegroundColor = ConsoleColor.Green;&#xD;
-				Console.WriteLine(&quot;Assertion successful.&quot;);&#xD;
+				System.out.println(&quot;\u001B[32m&quot; + &quot;Assertion successful.&quot; + &quot;\u001B[0m&quot;);&#xD;
 			}&#xD;
 			else&#xD;
 			{&#xD;
-				Console.ForegroundColor = ConsoleColor.Red;&#xD;
-				Console.WriteLine(&quot;Assertion failed!&quot;);&#xD;
+				System.out.println(&quot;\u001B[31m&quot; + &quot;Assertion failed!&quot; + &quot;\u001B[0m&quot;);&#xD;
 			}&#xD;
-&#xD;
-			Console.ResetColor();&#xD;
 		}&#xD;
 	}&#xD;
 &#xD;
 	index++;</body>
-        <body>using fuml.semantics.simpleclassifiers;&#xD;
-</body>
+        <body>import fuml.semantics.simpleclassifiers.IntegerValue;&#xD;
+import fuml.Debug;</body>
       </ownedBehavior>
       <edge xmi:type="uml:ObjectFlow" xmi:id="_dEDiEBdLEe-_2KaUB-6_dw" target="_4B-9kxdKEe-_2KaUB-6_dw" source="_uvCLgBdKEe-_2KaUB-6_dw">
         <guard xmi:type="uml:LiteralBoolean" xmi:id="_dEKPwBdLEe-_2KaUB-6_dw" value="true"/>

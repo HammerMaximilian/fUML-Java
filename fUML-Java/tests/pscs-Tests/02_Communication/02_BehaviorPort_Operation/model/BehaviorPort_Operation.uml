@@ -431,26 +431,22 @@ the only possibility of the caller to return from the call.&#xD;</body>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_Be9jcAPFEe-SFuuvGpr3og" name="input">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
         </ownedParameter>
-        <language>C#</language>
-        <language>Using</language>
+        <language>Java</language>
+        <language>Import</language>
         <body>// Test parameter input&#xD;
-	bool input = ((BooleanValue)inputParameters.ElementAt(0).values.ElementAt(0)).value;&#xD;
-	Debug.Println(&quot;[doBody] argument input = &quot; + input);&#xD;
+	boolean input = ((BooleanValue)inputParameters.get(0).values.get(0)).value;&#xD;
+	Debug.println(&quot;[doBody] argument input = &quot; + input);&#xD;
 &#xD;
 	if(input == false)&#xD;
 	{&#xD;
-		Console.ForegroundColor = ConsoleColor.Green;&#xD;
-		Console.WriteLine(&quot;Assertion successful.&quot;);&#xD;
+		System.out.println(&quot;\u001B[32m&quot; + &quot;Assertion successful.&quot; + &quot;\u001B[0m&quot;);&#xD;
 	}&#xD;
 	else&#xD;
 	{&#xD;
-		Console.ForegroundColor = ConsoleColor.Red;&#xD;
-		Console.WriteLine(&quot;Assertion failed!&quot;);&#xD;
-	}&#xD;
-&#xD;
-	Console.ResetColor();</body>
-        <body>using fuml.semantics.simpleclassifiers;&#xD;
-</body>
+		System.out.println(&quot;\u001B[31m&quot; + &quot;Assertion failed!&quot; + &quot;\u001B[0m&quot;);&#xD;
+	}</body>
+        <body>import fuml.semantics.simpleclassifiers.BooleanValue;&#xD;
+import fuml.Debug;</body>
       </ownedBehavior>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_pBNGAAPCEe-SFuuvGpr3og" name="p" type="_BCaloAOqEe-SFuuvGpr3og"/>
       <edge xmi:type="uml:ObjectFlow" xmi:id="_EIbVgAPEEe-SFuuvGpr3og" target="_B7KMsAPEEe-SFuuvGpr3og" source="_7-VB4APDEe-SFuuvGpr3og">

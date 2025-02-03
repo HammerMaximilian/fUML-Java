@@ -132,8 +132,8 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Activity" xmi:id="_V6RNoBlIEe-rIabL4k0WtA" name="assertA" node="_KzTDwBlJEe-rIabL4k0WtA _l_w1EBlJEe-rIabL4k0WtA">
       <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_YUBd0BlJEe-rIabL4k0WtA" name="assertionNotImplemented">
-        <language>C#</language>
-        <body>Console.WriteLine(&quot;Assertion currenlty not implemented! Model was validated by manual debugging.&quot;);</body>
+        <language>Java</language>
+        <body>System.out.println(&quot;Assertion currenlty not implemented! Model was validated by manual debugging.&quot;);</body>
       </ownedBehavior>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_YhvmMBlIEe-rIabL4k0WtA" name="a" type="_kqJfUAxLEe-7jJtWz9y30g"/>
       <node xmi:type="uml:ActivityParameterNode" xmi:id="_KzTDwBlJEe-rIabL4k0WtA" name="aParameterNode">

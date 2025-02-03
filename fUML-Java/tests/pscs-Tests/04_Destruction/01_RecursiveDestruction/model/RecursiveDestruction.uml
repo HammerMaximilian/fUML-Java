@@ -70,99 +70,90 @@ lower bound of connected parts</body>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gkhVYBk-Ee-rIabL4k0WtA"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gk-BUBk-Ee-rIabL4k0WtA" value="*"/>
         </ownedParameter>
-        <language>C#</language>
-        <body>Console.WriteLine(&quot;# Instances of B: &quot; + inputParameters.ElementAt(0).values.Count);</body>
+        <language>Java</language>
+        <body>System.out.println(&quot;# Instances of B: &quot; + inputParameters.get(0).values.size());</body>
       </ownedBehavior>
       <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_-SrnYBk-Ee-rIabL4k0WtA" name="numberOfCInstances">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_-SrnYRk-Ee-rIabL4k0WtA" name="cList" type="_PMiDcO9AEemWP7t7cfH8xA">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-SrnYhk-Ee-rIabL4k0WtA"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-SrnYxk-Ee-rIabL4k0WtA" value="*"/>
         </ownedParameter>
-        <language>C#</language>
-        <body>Console.WriteLine(&quot;# Instances of C: &quot; + inputParameters.ElementAt(0).values.Count);</body>
+        <language>Java</language>
+        <body>System.out.println(&quot;# Instances of C: &quot; + inputParameters.get(0).values.size());</body>
       </ownedBehavior>
       <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_HzxjIBk_Ee-rIabL4k0WtA" name="numberOfIImplInstances">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_HzxjIRk_Ee-rIabL4k0WtA" name="iImplList" type="_f0HqwAGmEe-l66M-61IreQ">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HzxjIhk_Ee-rIabL4k0WtA"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HzxjIxk_Ee-rIabL4k0WtA" value="*"/>
         </ownedParameter>
-        <language>C#</language>
-        <body>Console.WriteLine(&quot;# Instances of IImpl: &quot; + inputParameters.ElementAt(0).values.Count);</body>
+        <language>Java</language>
+        <body>System.out.println(&quot;# Instances of IImpl: &quot; + inputParameters.get(0).values.size());</body>
       </ownedBehavior>
       <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_-az9wBlAEe-rIabL4k0WtA" name="assertExtentOfB">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_-az9wRlAEe-rIabL4k0WtA" name="bList" type="_Mk9kQO9AEemWP7t7cfH8xA">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-az9whlAEe-rIabL4k0WtA"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-az9wxlAEe-rIabL4k0WtA" value="*"/>
         </ownedParameter>
-        <language>C#</language>
-        <body>Console.WriteLine(&quot;Asserting B.allInstances()->size() == 0&quot;);	&#xD;
+        <language>Java</language>
+        <body>System.out.println(&quot;Asserting B.allInstances()->size() == 0&quot;);	&#xD;
 &#xD;
-	int extentSize = inputParameters.ElementAt(0).values.Count;&#xD;
+	int extentSize = inputParameters.get(0).values.size();&#xD;
 	&#xD;
-	Console.WriteLine(&quot;B.allInstances()->size() == &quot; + extentSize);&#xD;
-	Console.Write(&quot;All instances of B recursively destroyed: &quot;);&#xD;
+	System.out.println(&quot;B.allInstances()->size() == &quot; + extentSize);&#xD;
+	System.out.print(&quot;All instances of B recursively destroyed: &quot;);&#xD;
 &#xD;
 	if(extentSize == 0)&#xD;
 	{&#xD;
-		Console.ForegroundColor = ConsoleColor.Green;&#xD;
-		Console.WriteLine(&quot;Assertion successful.&quot;);&#xD;
+		System.out.println(&quot;\u001B[32m&quot; + &quot;Assertion successful.&quot; + &quot;\u001B[0m&quot;);&#xD;
 	}&#xD;
 	else&#xD;
 	{&#xD;
-		Console.ForegroundColor = ConsoleColor.Red;&#xD;
-		Console.WriteLine(&quot;Assertion failed!&quot;);&#xD;
-	}&#xD;
-	Console.ResetColor();</body>
+		System.out.println(&quot;\u001B[31m&quot; + &quot;Assertion failed!&quot; + &quot;\u001B[0m&quot;);&#xD;
+	}</body>
       </ownedBehavior>
       <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_inlR8BlBEe-rIabL4k0WtA" name="assertExtentOfC">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_inlR8RlBEe-rIabL4k0WtA" name="cList" type="_PMiDcO9AEemWP7t7cfH8xA">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_inlR8hlBEe-rIabL4k0WtA"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_inlR8xlBEe-rIabL4k0WtA" value="*"/>
         </ownedParameter>
-        <language>C#</language>
-        <body>Console.WriteLine(&quot;Asserting C.allInstances()->size() == 0&quot;);	&#xD;
+        <language>Java</language>
+        <body>System.out.println(&quot;Asserting C.allInstances()->size() == 0&quot;);	&#xD;
 &#xD;
-	int extentSize = inputParameters.ElementAt(0).values.Count;&#xD;
+	int extentSize = inputParameters.get(0).values.size();&#xD;
 	&#xD;
-	Console.WriteLine(&quot;C.allInstances()->size() == &quot; + extentSize);&#xD;
-	Console.Write(&quot;All instances of C recursively destroyed: &quot;);&#xD;
+	System.out.println(&quot;C.allInstances()->size() == &quot; + extentSize);&#xD;
+	System.out.print(&quot;All instances of C recursively destroyed: &quot;);&#xD;
 &#xD;
 	if(extentSize == 0)&#xD;
 	{&#xD;
-		Console.ForegroundColor = ConsoleColor.Green;&#xD;
-		Console.WriteLine(&quot;Assertion successful.&quot;);&#xD;
+		System.out.println(&quot;\u001B[32m&quot; + &quot;Assertion successful.&quot; + &quot;\u001B[0m&quot;);&#xD;
 	}&#xD;
 	else&#xD;
 	{&#xD;
-		Console.ForegroundColor = ConsoleColor.Red;&#xD;
-		Console.WriteLine(&quot;Assertion failed!&quot;);&#xD;
-	}&#xD;
-	Console.ResetColor();</body>
+		System.out.println(&quot;\u001B[31m&quot; + &quot;Assertion failed!&quot; + &quot;\u001B[0m&quot;);&#xD;
+	}</body>
       </ownedBehavior>
       <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_qWT4MBlBEe-rIabL4k0WtA" name="assertExtentOfIImpl">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_qWT4MRlBEe-rIabL4k0WtA" name="iImplList" type="_f0HqwAGmEe-l66M-61IreQ">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qWT4MhlBEe-rIabL4k0WtA"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qWT4MxlBEe-rIabL4k0WtA" value="*"/>
         </ownedParameter>
-        <language>C#</language>
-        <body>Console.WriteLine(&quot;Asserting IImpl.allInstances()->size() == 0&quot;);	&#xD;
+        <language>Java</language>
+        <body>System.out.println(&quot;Asserting IImpl.allInstances()->size() == 0&quot;);	&#xD;
 &#xD;
-	int extentSize = inputParameters.ElementAt(0).values.Count;&#xD;
+	int extentSize = inputParameters.get(0).values.size();&#xD;
 	&#xD;
-	Console.WriteLine(&quot;IImpl.allInstances()->size() == &quot; + extentSize);&#xD;
-	Console.Write(&quot;All instances of IImpl recursively destroyed: &quot;);&#xD;
+	System.out.println(&quot;IImpl.allInstances()->size() == &quot; + extentSize);&#xD;
+	System.out.print(&quot;All instances of IImpl recursively destroyed: &quot;);&#xD;
 &#xD;
 	if(extentSize == 0)&#xD;
 	{&#xD;
-		Console.ForegroundColor = ConsoleColor.Green;&#xD;
-		Console.WriteLine(&quot;Assertion successful.&quot;);&#xD;
+		System.out.println(&quot;\u001B[32m&quot; + &quot;Assertion successful.&quot; + &quot;\u001B[0m&quot;);&#xD;
 	}&#xD;
 	else&#xD;
 	{&#xD;
-		Console.ForegroundColor = ConsoleColor.Red;&#xD;
-		Console.WriteLine(&quot;Assertion failed!&quot;);&#xD;
-	}&#xD;
-	Console.ResetColor();</body>
+		System.out.println(&quot;\u001B[31m&quot; + &quot;Assertion failed!&quot; + &quot;\u001B[0m&quot;);&#xD;
+	}</body>
       </ownedBehavior>
       <edge xmi:type="uml:ObjectFlow" xmi:id="_JokXABk-Ee-rIabL4k0WtA" target="_FVXccBk-Ee-rIabL4k0WtA" source="_xQq_EBk9Ee-rIabL4k0WtA">
         <guard xmi:type="uml:LiteralBoolean" xmi:id="_Jop2kBk-Ee-rIabL4k0WtA" value="true"/>

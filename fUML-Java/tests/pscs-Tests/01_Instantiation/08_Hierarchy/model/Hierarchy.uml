@@ -82,53 +82,50 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_6kHfEAJBEe-7BP3D2HOIzQ" name="listSize">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
-        <language>C#</language>
-        <language>Using</language>
-        <body>string parameterName = inputParameters.ElementAt(0).parameter!.name;&#xD;
+        <language>Java</language>
+        <language>Import</language>
+        <body>String parameterName = inputParameters.get(0).parameter.name;&#xD;
 	// Test parameter listSize&#xD;
-	int listSize = ((IntegerValue)inputParameters.ElementAt(0).values.ElementAt(0)).value;&#xD;
-	Debug.Println(&quot;[doBody] argument &quot; + parameterName +  &quot; = &quot; + listSize);&#xD;
+	int listSize = ((IntegerValue)inputParameters.get(0).values.get(0)).value;&#xD;
+	Debug.println(&quot;[doBody] argument &quot; + parameterName +  &quot; = &quot; + listSize);&#xD;
 &#xD;
-	Console.Write(&quot;Part is empty: &quot;);&#xD;
+	System.out.println(&quot;Part is empty: &quot;);&#xD;
 &#xD;
 	if(listSize == 0)&#xD;
 	{&#xD;
-		Console.ForegroundColor = ConsoleColor.Green;&#xD;
-		Console.WriteLine(&quot;Assertion successful.&quot;);&#xD;
+&#xD;
+		System.out.println(&quot;\u001B[32m&quot; + &quot;Assertion successful.&quot; + &quot;\u001B[0m&quot;);&#xD;
 	}&#xD;
 	else&#xD;
 	{&#xD;
-		Console.ForegroundColor = ConsoleColor.Red;&#xD;
-		Console.WriteLine(&quot;Assertion failed!&quot;);&#xD;
-	}&#xD;
-	Console.ResetColor();</body>
-        <body>using fuml.semantics.simpleclassifiers;</body>
+		System.out.println(&quot;\u001B[31m&quot; + &quot;Assertion failed!&quot; + &quot;\u001B[0m&quot;);&#xD;
+	}</body>
+        <body>import fuml.Debug;&#xD;
+import fuml.semantics.simpleclassifiers.IntegerValue;</body>
       </ownedBehavior>
       <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_VEPSUAJDEe-7BP3D2HOIzQ" name="testNonEmptyList">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_VEPSUQJDEe-7BP3D2HOIzQ" name="listSize">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
-        <language>C#</language>
-        <language>Using</language>
-        <body>string parameterName = inputParameters.ElementAt(0).parameter!.name;&#xD;
+        <language>Java</language>
+        <language>Import</language>
+        <body>String parameterName = inputParameters.get(0).parameter.name;&#xD;
 	// Test parameter listSize&#xD;
-	int listSize = ((IntegerValue)inputParameters.ElementAt(0).values.ElementAt(0)).value;&#xD;
-	Debug.Println(&quot;[doBody] argument &quot; + parameterName +  &quot; = &quot; + listSize);&#xD;
+	int listSize = ((IntegerValue)inputParameters.get(0).values.get(0)).value;&#xD;
+	Debug.println(&quot;[doBody] argument &quot; + parameterName +  &quot; = &quot; + listSize);&#xD;
 &#xD;
-	Console.Write(&quot;Part is not empty: &quot;);&#xD;
+	System.out.println(&quot;Part is not empty: &quot;);&#xD;
 &#xD;
 	if(listSize > 0)&#xD;
 	{&#xD;
-		Console.ForegroundColor = ConsoleColor.Green;&#xD;
-		Console.WriteLine(&quot;Assertion successful.&quot;);&#xD;
+		System.out.println(&quot;\u001B[32m&quot; + &quot;Assertion successful.&quot; + &quot;\u001B[0m&quot;);&#xD;
 	}&#xD;
 	else&#xD;
 	{&#xD;
-		Console.ForegroundColor = ConsoleColor.Red;&#xD;
-		Console.WriteLine(&quot;Assertion failed!&quot;);&#xD;
-	}&#xD;
-	Console.ResetColor();</body>
-        <body>using fuml.semantics.simpleclassifiers;</body>
+		System.out.println(&quot;\u001B[31m&quot; + &quot;Assertion failed!&quot; + &quot;\u001B[0m&quot;);&#xD;
+	}</body>
+        <body>import fuml.Debug;&#xD;
+import fuml.semantics.simpleclassifiers.IntegerValue;</body>
       </ownedBehavior>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_CeLqgAGxEe-elp4mN3LRIg" name="a"/>
       <edge xmi:type="uml:ObjectFlow" xmi:id="_Fa2NgAJBEe-7BP3D2HOIzQ" target="_9KVv4AJAEe-7BP3D2HOIzQ" source="__hw8sAGwEe-elp4mN3LRIg">
