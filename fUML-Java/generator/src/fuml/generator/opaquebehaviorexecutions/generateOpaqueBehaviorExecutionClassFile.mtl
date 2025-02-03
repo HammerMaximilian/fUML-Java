@@ -13,13 +13,13 @@
  */
 package [anOpaqueBehavior.getRootPackage().getNameSanitized()/];
 
-[for (usingStatement : String | 
-	anOpaqueBehavior.getOpaqueBehaviorExecutionUsingsFromModel()
+[for (importStatement : String | 
+	anOpaqueBehavior.getOpaqueBehaviorExecutionImportsFromModel()
 	->including('import fuml.semantics.commonbehavior.OpaqueBehaviorExecution;\r\n')
 	->including('import fuml.semantics.commonbehavior.ParameterValueList;\r\n')
 	->including('import fuml.semantics.values.Value;\r\n')
 	->asOrderedSet())]
-[usingStatement/]
+[importStatement/]
 [/for]
 
 /* [protected (': User-defined imports')]
@@ -56,7 +56,7 @@ public class [anOpaqueBehavior.getNameSanitized()/]Execution extends OpaqueBehav
 	}
 
 	@Override
-	protected Value new_()
+	public Value new_()
 	{
 		return new [anOpaqueBehavior.getNameSanitized() + 'Execution'/]();
 	}	
@@ -80,7 +80,7 @@ public class [anOpaqueBehavior.getNameSanitized()/]Execution extends OpaqueBehav
 	endif /]
 [query private isRootPackage(aPackage : Package) : Boolean = aPackage.nestingPackage = null /]
 
-[query private getOpaqueBehaviorExecutionUsingsFromModel(anOpaqueBehavior : OpaqueBehavior) : Set(String) =
+[query private getOpaqueBehaviorExecutionImportsFromModel(anOpaqueBehavior : OpaqueBehavior) : Set(String) =
 	if(anOpaqueBehavior.language->includes('Import') and anOpaqueBehavior._body->size() >= anOpaqueBehavior.language->size())
 	then anOpaqueBehavior._body->at(anOpaqueBehavior.language->indexOf('Import')).tokenize('\n').tokenize('\r\n')->asSet()
 	else Set(String){}
