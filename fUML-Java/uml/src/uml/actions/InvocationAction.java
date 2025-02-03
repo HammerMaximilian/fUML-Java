@@ -22,5 +22,9 @@ public abstract class InvocationAction extends
 		super.addInput(argument);
 		this.argument.addValue(argument);
 	} // addArgument
-
+	
+	public void setOnPort(uml.structuredclassifiers.Port onPort) // PSCS-specific
+	{ 
+	    this.onPort = onPort; 
+	}
 } // InvocationAction

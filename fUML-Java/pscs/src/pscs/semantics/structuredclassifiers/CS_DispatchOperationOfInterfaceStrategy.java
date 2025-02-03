@@ -28,7 +28,7 @@ public class CS_DispatchOperationOfInterfaceStrategy extends RedefinitionBasedDi
                 Parameter baseParameter = baseOperationParameters.get(i);
                 matches = ownedParameter.type == baseParameter.type;
                 matches = matches && (ownedParameter.multiplicityElement.lower == baseParameter.multiplicityElement.lower);
-                matches = matches && (ownedParameter.multiplicityElement.upper == baseParameter.multiplicityElement.upper);
+                matches = matches && (ownedParameter.multiplicityElement.upper.naturalValue == baseParameter.multiplicityElement.upper.naturalValue);
                 matches = matches && (ownedParameter.direction == baseParameter.direction);
             }
         }

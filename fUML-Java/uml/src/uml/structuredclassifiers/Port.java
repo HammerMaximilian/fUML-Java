@@ -13,7 +13,7 @@ public class Port extends Property // PSCS-specific
     public InterfaceList provided = new InterfaceList();
     public PortList redefinedPort = new PortList();
 
-    public void AddRequired(Interface required)
+    public void addRequired(Interface required)
     {
         if (required == null)
         {
@@ -23,7 +23,7 @@ public class Port extends Property // PSCS-specific
         this.required.add(required);
     }
 
-    public void AddProvided(Interface provided)
+    public void addProvided(Interface provided)
     {
         if (provided == null)
         {
@@ -33,7 +33,7 @@ public class Port extends Property // PSCS-specific
         this.provided.add(provided);
     }
 
-    public void AddRedefinedPort(Port redefinedPort)
+    public void addRedefinedPort(Port redefinedPort)
     {
         if (redefinedPort == null)
         {

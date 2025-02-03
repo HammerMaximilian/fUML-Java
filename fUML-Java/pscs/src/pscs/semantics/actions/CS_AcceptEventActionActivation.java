@@ -1,10 +1,10 @@
 package pscs.semantics.actions;
 
-import fuml.semantics.actions.AcceptCallActionActivation;
+import fuml.semantics.actions.AcceptEventActionActivation;
 import fuml.semantics.commonbehavior.EventOccurrence;
 import pscs.semantics.commonbehavior.CS_EventOccurrence;
 
-public class CS_AcceptEventActionActivation extends AcceptCallActionActivation {
+public class CS_AcceptEventActionActivation extends AcceptEventActionActivation {
 
 	@Override
     public void accept(EventOccurrence eventOccurrence)

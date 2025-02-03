@@ -14,7 +14,7 @@ public class ConnectorEnd extends MultiplicityElement // PSCS-specific
         role.connectableElement.end.add(this);
     }
 
-    public void SetPartWithPort(Property partWithPort)
+    public void setPartWithPort(Property partWithPort)
     {
         this.partWithPort = partWithPort;
     }
