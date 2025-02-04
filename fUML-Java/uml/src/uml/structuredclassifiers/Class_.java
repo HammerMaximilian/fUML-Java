@@ -23,6 +23,8 @@ import uml.commonstructure.NamedElementList;
 public class Class_ extends
 		uml.commonbehavior.BehavioredClassifier {
 
+	public uml.structuredclassifiers.EncapsulatedClassifier encapsulatedClassifier = new uml.structuredclassifiers.EncapsulatedClassifier(); // PSCS-specific ; NOTE: class EncapsulatedClassifier cannot be abstract here
+	
 	private boolean superClassConstructed = false;
 	
 	public uml.classification.OperationList ownedOperation = new uml.classification.OperationList();
@@ -51,8 +53,17 @@ public class Class_ extends
 
 	public void addOwnedAttribute(
 			uml.classification.Property ownedAttribute) {
-		super.addAttribute(ownedAttribute);
-		super.addOwnedMember(ownedAttribute);
+		addAttribute(ownedAttribute);
+		addOwnedMember(ownedAttribute);
+		// Has to be propagated to encapsulatedClassifier
+		if(ownedAttribute instanceof Port port)
+		{
+		    encapsulatedClassifier.addOnwedPort(port);
+		}
+		else
+		{
+			encapsulatedClassifier.addOwnedAttribute(ownedAttribute); // PSCS-specific : Class::ownedAttribute redefines StructuredClassifier::ownedAttribute
+		}
 
 		this.ownedAttribute.addValue(ownedAttribute);
 		ownedAttribute._setClass(this);
@@ -74,6 +85,13 @@ public class Class_ extends
 
 		this.ownedReception.addValue(ownedReception);
 	} // addOwnedReception
+	
+	public void addOwnedConnector(uml.structuredclassifiers.Connector ownedConnector)
+    {
+        addFeature(ownedConnector);
+        addOwnedMember(ownedConnector);
+        encapsulatedClassifier.AddOwnedConnector(ownedConnector);
+    } // addOwnedConnector
 
 	public uml.commonstructure.NamedElementList inherit(
 			uml.commonstructure.NamedElementList inhs) {

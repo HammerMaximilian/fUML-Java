@@ -1,7 +1,7 @@
 <img src="logo.png" width="264"/>
 
-# fUML Reference Implementation for *Java*
-This software is an open source reference implementation of the *Semantics of a Foundational Subset for Executable UML Models* (fUML)  specifications by the *Object Management Group* (OMG) (see [fUML](https://www.omg.org/spec/FUML/1.5/About-FUML)). The fUML implementation of this software is a ont-on-one port of the original Java fUML reference implementation developed by
+# fUML/PSCS Reference Implementation for *Java*
+This software is an open source reference implementation of the *Semantics of a Foundational Subset for Executable UML Models* (fUML) and *Precise Semantics of UML Composite Structures* (PSCS) specifications by the *Object Management Group* (OMG) (see [fUML](https://www.omg.org/spec/FUML/1.5/About-FUML) and [PSCS](https://www.omg.org/spec/PSCS/1.2/About-PSCS)). The fUML implementation of this software is a ont-on-one port of the original Java fUML reference implementation developed by
 *Model Driven Solutions* (see [https://github.com/ModelDriven/fUML-Reference-Implementation](https://github.com/ModelDriven/fUML-Reference-Implementation))
 
 ## Licensing
@@ -21,7 +21,7 @@ For detailed information, please see the [User Guide](fUML-Java_User_Guide.pdf) 
 For detailed information, please see the [User Guide](fUML-Java_User_Guide.pdf) section *2. Setup*.
 ### 1. Setting up Eclipse
 * Import fUML-Java root project *fUML-Java* into your workspace
-* Import nested projects *uml* and *fuml*
+* Import nested projects *uml*, *fuml* and *pscs*
 
 ## Building
 For detailed information, please see the [User Guide](fUML-Java_User_Guide.pdf) section *3. Build*.
@@ -34,8 +34,8 @@ For detailed information, please see the [User Guide](fUML-Java_User_Guide.pdf) 
 * Create new Java project (see `"<fUML-Java-rootdir>\examples\helloworld"` as a reference project)
   * NOTE: it is suggested to store user-defined source code projects in common directory `"<fUML-Java-rootdir>\usersrc"`
   * The *usersrc* directory may contain arbitrary nested subdirectories
-* Add the *uml* and *fuml* projects to the classpath of your project
-* Create a `<model-name>Environment` class by extending class `utils.environmentfuml.Environment`
+* Add the *uml*, *fuml* and *pscs* (for PSCS-compatibility) projects to the classpath of your project
+* Create a `<model-name>Environment` class by extending class `utils.environmentfuml.Environment` (or `utils.environmentpscs.Environment` for PSCS-compatibility)
 * Create a `<model-name>Model` class by extending class `utils.environment.InMemoryModel` (this class will contain all of your model elements)
 * Create a class containing a main method and call `<model-name>Environment.instance().execute("<behavior-name>");` for each behavior you want to execute in subsequent order
 * Run your project as a Java application within the *Eclipse IDE*

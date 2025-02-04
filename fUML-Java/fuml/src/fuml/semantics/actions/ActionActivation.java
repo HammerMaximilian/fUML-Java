@@ -172,7 +172,7 @@ public abstract class ActionActivation extends fuml.semantics.activities.Executa
 
 		InputPinList inputPins = ((Action) (this.node)).input;
 		int j = 1;
-		while (ready & j <= inputPins.size()) {
+		while (ready && j <= inputPins.size()) {
 			ready = this.getPinActivation(inputPins.getValue(j - 1)).isReady();
 			j = j + 1;
 		}

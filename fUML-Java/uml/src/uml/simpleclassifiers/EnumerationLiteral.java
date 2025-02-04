@@ -20,7 +20,6 @@ public class EnumerationLiteral extends
 
 	public void _setEnumeration(
 			uml.simpleclassifiers.Enumeration enumeration) {
-		super.addClassifier(enumeration);
 		this.classifier = enumeration;
 		this.enumeration = enumeration;
 	} // _setEnumeration

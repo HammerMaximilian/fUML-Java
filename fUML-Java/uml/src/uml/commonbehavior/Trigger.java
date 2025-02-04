@@ -15,9 +15,15 @@ package uml.commonbehavior;
 public class Trigger extends uml.commonstructure.NamedElement {
 
 	public uml.commonbehavior.Event event = null;
+	public uml.structuredclassifiers.PortList port = new uml.structuredclassifiers.PortList(); // PSCS-specific
 
 	public void setEvent(uml.commonbehavior.Event event) {
 		this.event = event;
 	} // setEvent
+	
+    public void addPort(uml.structuredclassifiers.Port port) // PSCS-specific
+    {
+        this.port.add(port);
+    }
 
 } // Trigger

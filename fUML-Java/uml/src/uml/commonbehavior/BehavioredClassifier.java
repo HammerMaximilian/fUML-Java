@@ -17,6 +17,7 @@ public abstract class BehavioredClassifier extends
 
 	public uml.commonbehavior.BehaviorList ownedBehavior = new uml.commonbehavior.BehaviorList();
 	public uml.commonbehavior.Behavior classifierBehavior = null;
+	public uml.simpleclassifiers.InterfaceRealizationList interfaceRealization = new uml.simpleclassifiers.InterfaceRealizationList(); // PSCS-specific
 
 	public void addOwnedBehavior(
 			uml.commonbehavior.Behavior ownedBehavior) {
@@ -39,5 +40,14 @@ public abstract class BehavioredClassifier extends
 
 		this.classifierBehavior = classifierBehavior;
 	} // setClassifierBehavior
+	
+    public void addInterfaceRealization(uml.simpleclassifiers.InterfaceRealization interfaceRealization) // PSCS-specific
+    {
+        this.interfaceRealization.add(interfaceRealization);
+        interfaceRealization._setImplementingClassifier(this);
+
+        addClientDependency(interfaceRealization);
+        addOwnedElement(interfaceRealization);
+    }
 
 } // BehavioredClassifier

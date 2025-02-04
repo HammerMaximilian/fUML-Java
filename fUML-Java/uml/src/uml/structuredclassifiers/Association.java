@@ -29,7 +29,7 @@ public class Association extends uml.classification.Classifier {
 		this.ownedEnd.addValue(ownedEnd);
 		ownedEnd._setOwningAssociation(this);
 
-		this._addMemberEnd(ownedEnd);
+		this.addMemberEnd(ownedEnd);
 	} // addOwnedEnd
 
 	public void addNavigableOwnedEnd(

@@ -18,7 +18,8 @@ public abstract class NamedElement extends uml.commonstructure.Element {
 	public uml.commonstructure.VisibilityKind visibility = null;
 	public String qualifiedName = "";
 	public uml.commonstructure.Namespace namespace = null;
-
+	public uml.commonstructure.DependencyList clientDependency = new uml.commonstructure.DependencyList(); // PSCS-specific
+	
 	public void setName(String name) {
 		this.name = name;
 
@@ -48,5 +49,16 @@ public abstract class NamedElement extends uml.commonstructure.Element {
 			}
 		}
 	} // _setNamespace
+	
+    public void addClientDependency(
+    		uml.commonstructure.Dependency clientDependency) // PSCS-specific
+    {
+        if (clientDependency == null)
+        {
+            throw new IllegalArgumentException();
+        }
+
+        this.clientDependency.add(clientDependency);
+    }
 
 } // NamedElement

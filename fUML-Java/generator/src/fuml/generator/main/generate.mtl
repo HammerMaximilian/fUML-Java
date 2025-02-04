@@ -32,11 +32,11 @@
 [comment]
  * Uncomment the following line to generate the model as fUML-executable (i.e. generates bypasses PSCS execution environment)
 [/comment]
-[setIsFUMLExecutable()/]
+[comment] [setIsFUMLExecutable()/] [/comment]
 [comment]
  * Uncomment the following line to generate the model as PSCS-executable
 [/comment]
-[comment] [setIsPSCSExecutable()/] [/comment]
+[setIsPSCSExecutable()/]
 
 
 [comment Ensure that this is only done for the root package /]
