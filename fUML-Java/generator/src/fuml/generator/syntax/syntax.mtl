@@ -64,8 +64,18 @@ import uml.[if(supportedActionsMetaclasses()->includes(metaclassName))]actions[e
 		'TestIdentityAction',
 		'UnmarshallAction',
 		'ValueSpecificationAction'
-	}
+	}->addAll(extendedActionsMetaclasses())
  /]
+
+[query private extendedActionsMetaclasses(Any : OclAny) : Set(String) = Set(String)
+	{
+		'AddVariableValueAction',
+		'ClearVariableAction',
+		'ReadVariableAction',
+		'RemoveVariableValueAction'
+	}
+/]
+
 
 [query private supportedActivitiesMetaclasses(Any : OclAny) : Set(String) = Set(String)
 	{
@@ -85,8 +95,14 @@ import uml.[if(supportedActionsMetaclasses()->includes(metaclassName))]actions[e
 		'JoinNode',
 		'MergeNode',
 		'ObjectFlow'
-	}
+	}->addAll(extendedActivitiesMetaclasses())
  /]
+
+[query private extendedActivitiesMetaclasses(Any : OclAny) : Set(String) = Set(String)
+	{
+		'Variable'
+	}
+/]
 
 [query private supportedClassificationMetaclasses(Any : OclAny) : Set(String) = Set(String)
 	{

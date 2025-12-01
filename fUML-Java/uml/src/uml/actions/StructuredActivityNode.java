@@ -23,6 +23,7 @@ public class StructuredActivityNode extends
 	public uml.activities.ActivityEdgeList edge = new uml.activities.ActivityEdgeList();
 	public uml.actions.OutputPinList structuredNodeOutput = new uml.actions.OutputPinList();
 	public uml.actions.InputPinList structuredNodeInput = new uml.actions.InputPinList();
+	public uml.activities.VariableList variable = new uml.activities.VariableList();
 
 	public void setMustIsolate(boolean mustIsolate) {
 		this.mustIsolate = mustIsolate;
@@ -66,5 +67,9 @@ public class StructuredActivityNode extends
 		super._setActivity(activity);
 		this.activity = activity;
 	} // _setActivity
+	
+	public void addVariable(uml.activities.Variable variable) {
+		this.variable.add(variable);
+	} // addVariable
 
 } // StructuredActivityNode

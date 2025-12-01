@@ -28,7 +28,8 @@ import uml.activities.ExecutableNode;
 
 public class LoopNodeActivation
 		extends
-		fuml.semantics.actions.StructuredActivityNodeActivation {
+		fuml.extensions.actions.StructuredActivityNodeActivation {
+		//fuml.semantics.actions.StructuredActivityNodeActivation {
 
 	public fuml.semantics.actions.ValuesList bodyOutputLists = new fuml.semantics.actions.ValuesList();
 	public boolean isTerminateAll = false;

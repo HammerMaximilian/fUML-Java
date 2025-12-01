@@ -22,6 +22,7 @@ public class Activity extends
 	public boolean isReadOnly = false;
 	public uml.activities.ActivityEdgeList edge = new uml.activities.ActivityEdgeList();
 	public uml.activities.ActivityGroupList group = new uml.activities.ActivityGroupList();
+	public uml.activities.VariableList variable = new uml.activities.VariableList();
 
 	public void setIsReadOnly(boolean isReadOnly) {
 		this.isReadOnly = isReadOnly;
@@ -74,5 +75,9 @@ public class Activity extends
 			}
 		}
 	} // _setContext
+	
+	public void addVariable(uml.activities.Variable variable) {
+		this.variable.add(variable);
+	} // addVariable
 
 } // Activity

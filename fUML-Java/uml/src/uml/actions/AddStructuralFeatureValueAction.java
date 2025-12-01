@@ -16,13 +16,13 @@ public class AddStructuralFeatureValueAction extends
 		uml.actions.WriteStructuralFeatureAction {
 
 	public boolean isReplaceAll = false;
-	public uml.actions.InputPin insertAt = null;
+	public InputPin insertAt = null;
 
 	public void setIsReplaceAll(boolean isReplaceAll) {
 		this.isReplaceAll = isReplaceAll;
 	} // setIsReplaceAll
 
-	public void setInsertAt(uml.actions.InputPin insertAt) {
+	public void setInsertAt(InputPin insertAt) {
 		if (insertAt != null) {
 			super.addInput(insertAt);
 		}

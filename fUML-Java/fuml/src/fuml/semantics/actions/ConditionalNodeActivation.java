@@ -29,7 +29,8 @@ import uml.activities.ExecutableNodeList;
 
 public class ConditionalNodeActivation
 		extends
-		fuml.semantics.actions.StructuredActivityNodeActivation {
+		fuml.extensions.actions.StructuredActivityNodeActivation {
+		// fuml.semantics.actions.StructuredActivityNodeActivation {
 
 	public fuml.semantics.actions.ClauseActivationList clauseActivations = new fuml.semantics.actions.ClauseActivationList();
 	public uml.actions.ClauseList selectedClauses = new uml.actions.ClauseList();

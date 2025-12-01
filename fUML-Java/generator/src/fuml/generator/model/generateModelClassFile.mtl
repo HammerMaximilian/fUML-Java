@@ -158,6 +158,20 @@ addToElementRepository("[anElement.getName()/]", [anElement.getFullNameSanitized
 [/let]
 [/template]
 
+[template private generateElementInitialization(anElement : Element) ? (anElement.oclIsKindOf(AddVariableValueAction)) post(trim())]
+[let anAddVariableValueAction : AddVariableValueAction = anElement.oclAsType(AddVariableValueAction)]
+[anAddVariableValueAction.generateWriteVariableActionInitialization()/]
+[comment Property 'AddVariableValueAction::isReplaceAll' /]
+	[if (anAddVariableValueAction.isReplaceAll)]
+[anAddVariableValueAction.getFullNameSanitized()/].setIsReplaceAll(true);
+	[/if]
+[comment Property 'AddVariableValueAction::insertAt' /]
+	[if (not (anAddVariableValueAction.insertAt.oclIsUndefined()))]
+[anAddVariableValueAction.getFullNameSanitized()/].setInsertAt([anAddVariableValueAction.insertAt.getFullNameSanitized()/]);
+	[/if]
+[/let]
+[/template]
+
 [template private generateElementInitialization(anElement : Element) ? (anElement.oclIsKindOf(CallBehaviorAction)) post(trim())]
 [let aCallBehaviorAction : CallBehaviorAction = anElement.oclAsType(CallBehaviorAction)]
 [aCallBehaviorAction.generateCallActionInitialization()/]
@@ -216,6 +230,12 @@ addToElementRepository("[anElement.getName()/]", [anElement.getFullNameSanitized
 	[if (not (aClearStructuralFeatureAction.result.oclIsUndefined()))]
 [aClearStructuralFeatureAction.getFullNameSanitized()/].setResult([aClearStructuralFeatureAction.result.getFullNameSanitized()/]);
 	[/if]
+[/let]
+[/template]
+
+[template private generateElementInitialization(anElement : Element) ? (anElement.oclIsKindOf(ClearVariableAction)) post(trim())]
+[let aClearVariableAction : ClearVariableAction = anElement.oclAsType(ClearVariableAction)]
+[aClearVariableAction.generateVariableActionInitialization()/]
 [/let]
 [/template]
 
@@ -406,6 +426,16 @@ addToElementRepository("[anElement.getName()/]", [anElement.getFullNameSanitized
 [/let]
 [/template]
 
+[template private generateElementInitialization(anElement : Element) ? (anElement.oclIsKindOf(ReadVariableAction)) post(trim())]
+[let aReadVariableAction : ReadVariableAction = anElement.oclAsType(ReadVariableAction)]
+[aReadVariableAction.generateVariableActionInitialization()/]
+[comment Property 'ReadVariableAction::result' /]
+	[if (not (aReadVariableAction.result.oclIsUndefined()))]
+[aReadVariableAction.getFullNameSanitized()/].setResult([aReadVariableAction.result.getFullNameSanitized()/]);
+	[/if]
+[/let]
+[/template]
+
 [template private generateElementInitialization(anElement : Element) ? (anElement.oclIsKindOf(ReclassifyObjectAction)) post(trim())]
 [let aReclassifyObjectAction : ReclassifyObjectAction = anElement.oclAsType(ReclassifyObjectAction)]
 [aReclassifyObjectAction.generateActionInitialization()/]
@@ -458,6 +488,20 @@ addToElementRepository("[anElement.getName()/]", [anElement.getFullNameSanitized
 [comment Property 'RemoveStructuralFeatureValueAction::removeAt' /]
 	[if (not (aRemoveStructuralFeatureValueAction.removeAt.oclIsUndefined()))]
 [aRemoveStructuralFeatureValueAction.getFullNameSanitized()/].setRemoveAt([aRemoveStructuralFeatureValueAction.removeAt.getFullNameSanitized()/]);
+	[/if]
+[/let]
+[/template]
+
+[template private generateElementInitialization(anElement : Element) ? (anElement.oclIsKindOf(RemoveVariableValueAction)) post(trim())]
+[let aRemoveVariableValueAction : RemoveVariableValueAction = anElement.oclAsType(RemoveVariableValueAction)]
+[aRemoveVariableValueAction.generateWriteVariableActionInitialization()/]
+[comment Property 'RemoveVariableValueAction::isRemoveDuplicates' /]
+	[if (aRemoveVariableValueAction.isRemoveDuplicates)]
+[aRemoveVariableValueAction.getFullNameSanitized()/].setIsRemoveDuplicates(true);
+	[/if]
+[comment Property 'RemoveVariableValueAction::removeAt' /]
+	[if (not (aRemoveVariableValueAction.removeAt.oclIsUndefined()))]
+[aRemoveVariableValueAction.getFullNameSanitized()/].setRemoveAt([aRemoveVariableValueAction.removeAt.getFullNameSanitized()/]);
 	[/if]
 [/let]
 [/template]
@@ -606,6 +650,10 @@ addToElementRepository("[anElement.getName()/]", [anElement.getFullNameSanitized
 	[for (anActivityGroup : ActivityGroup | anActivity.group->removeAll(anActivity.structuredNode))]
 [anActivity.getFullNameSanitized()/].addGroup([anActivityGroup.getFullNameSanitized()/]);
 	[/for]
+[comment Property 'Activity::variable' /]
+	[for (aVariable : Variable | anActivity.variable)]
+[anActivity.getFullNameSanitized()/].addVariable([aVariable.getFullNameSanitized()/]);
+	[/for]
 [/let]
 [/template]
 
@@ -693,6 +741,22 @@ addToElementRepository("[anElement.getName()/]", [anElement.getFullNameSanitized
 [template private generateElementInitialization(anElement : Element) ? (anElement.oclIsKindOf(StructuredActivityNode)) post(trim())]
 [let aStructuredActivityNode : StructuredActivityNode = anElement.oclAsType(StructuredActivityNode)]
 [aStructuredActivityNode.generateStructuredActivityNodeInitialization()/]
+[/let]
+[/template]
+
+[template private generateElementInitialization(anElement : Element) ? (anElement.oclIsKindOf(Variable)) post(trim())]
+[let aVariable : Variable = anElement.oclAsType(Variable)]
+[aVariable.generateNamedElementInitialization() /]
+[aVariable.generateMultiplicityElementInitialization()/]
+[aVariable.generateTypedElementInitialization()/]
+[comment Property 'Variable::activityScope' /]
+	[if (not aVariable.activityScope.oclIsUndefined())]
+[aVariable.getFullNameSanitized()/]._setActivityScope([aVariable.activityScope.getFullNameSanitized()/]);
+	[/if]
+[comment Property 'Variable::scope' /]
+	[if (not aVariable.scope.oclIsUndefined())]
+[aVariable.getFullNameSanitized()/]._setScope([aVariable.scope.getFullNameSanitized()/]);
+	[/if]
 [/let]
 [/template]
 
@@ -1386,6 +1450,10 @@ addToElementRepository("[anElement.getName()/]", [anElement.getFullNameSanitized
 [for (anOutputPin : OutputPin | aStructuredActivityNode.structuredNodeOutput)]
 [aStructuredActivityNode.getFullNameSanitized()/].addStructuredNodeInput([anOutputPin.getFullNameSanitized()/]);
 [/for]
+[comment Property 'StructuredActivityNode::variable' /]
+[for (aVariable : Variable | aStructuredActivityNode.variable)]
+[aStructuredActivityNode.getFullNameSanitized()/].addVariable([aVariable.getFullNameSanitized()/]);
+[/for]
 [/template]
 
 [template private generateStructuredClassifierInitialization(aStructuredClassifier : StructuredClassifier) post(trim())]
@@ -1414,9 +1482,25 @@ addToElementRepository("[anElement.getName()/]", [anElement.getFullNameSanitized
 	[/if]
 [/template]
 
+[template private generateWriteVariableActionInitialization(aWriteVariableAction : WriteVariableAction) post(trim())]
+[aWriteVariableAction.generateVariableActionInitialization()/]
+[comment Property 'WriteVariableAction::value' /]
+	[if (not (aWriteVariableAction.value.oclIsUndefined()))]
+[aWriteVariableAction.getFullNameSanitized()/].setValue([aWriteVariableAction.value.getFullNameSanitized()/]);
+	[/if]
+[/template]
+
 [template private generateValueSpecificationInitialization(aValueSpecification : ValueSpecification) post(trim())]
 [aValueSpecification.generateNamedElementInitialization()/]
 [aValueSpecification.generateTypedElementInitialization()/]
+[/template]
+
+[template private generateVariableActionInitialization(aVariableAction : VariableAction) post(trim())]
+[aVariableAction.generateActionInitialization()/]
+[comment Property 'VariableAction::variable' /]
+	[if (not (aVariableAction.variable.oclIsUndefined()))]
+[aVariableAction.getFullNameSanitized()/].setVariable([aVariableAction.variable.getFullNameSanitized()/]);
+	[/if]
 [/template]
 
 [template private generateElementReference(refferedElement : Element, referringElement : Element) post(trim())]
