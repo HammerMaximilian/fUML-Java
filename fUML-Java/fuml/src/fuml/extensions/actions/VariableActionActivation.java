@@ -46,6 +46,8 @@ public abstract class VariableActionActivation extends
 			{
 				variableValue = accessibleVariableValues.getValue(i);
 			}
+			
+			i++;
 		}
 		
 		return variableValue;
