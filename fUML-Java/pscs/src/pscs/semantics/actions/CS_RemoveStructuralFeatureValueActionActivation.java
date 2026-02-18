@@ -5,6 +5,8 @@ import fuml.semantics.loci.ChoiceStrategy;
 import fuml.semantics.simpleclassifiers.FeatureValue;
 import fuml.semantics.simpleclassifiers.StructuredValue;
 import fuml.semantics.simpleclassifiers.UnlimitedNaturalValue;
+import fuml.semantics.structuredclassifiers.ExtensionalValue;
+import fuml.semantics.structuredclassifiers.ExtensionalValueList;
 import fuml.semantics.structuredclassifiers.Link;
 import fuml.semantics.structuredclassifiers.LinkList;
 import fuml.semantics.structuredclassifiers.Reference;
@@ -12,8 +14,10 @@ import fuml.semantics.values.Value;
 import fuml.semantics.values.ValueList;
 import pscs.semantics.structuredclassifiers.CS_InteractionPoint;
 import pscs.semantics.structuredclassifiers.CS_Link;
+import pscs.semantics.structuredclassifiers.CS_LinkList;
 import pscs.semantics.structuredclassifiers.CS_Reference;
 import uml.actions.AddStructuralFeatureValueAction;
+import uml.actions.RemoveStructuralFeatureValueAction;
 import uml.classification.Property;
 import uml.classification.StructuralFeature;
 import uml.structuredclassifiers.Association;
@@ -25,215 +29,245 @@ public class CS_RemoveStructuralFeatureValueActionActivation extends RemoveStruc
 	@Override
     public void doAction()
     {
-        // If the feature is a port and the input value to be added is a
-        // Reference,
-        // Replaces this Reference by an InteractionPoint, and then behaves
-        // as usual.
-        // If the feature is not a port, behaves as usual
-        AddStructuralFeatureValueAction action = (AddStructuralFeatureValueAction)node;
+        // Get the values of the object and value input pins. 
+        // If the given feature is an association end, then Destroy any
+        // matching links. Otherwise, if the object input is a structural
+        // value, remove values from the given feature and Destroy all links
+        // in which the removed values are involved.
+        // If isRemoveDuplicates is true, then Destroy all current matching
+        // links or remove all values equal to the input value.
+        // If isRemoveDuplicates is false and there is no removeAt input pin,
+        // remove any one feature value equal to the input value (if there are
+        // any that are equal).
+        // If isRemoveDuplicates is false, and there is a removeAt input pin
+        // remove the feature value at that position.
+        RemoveStructuralFeatureValueAction action = (RemoveStructuralFeatureValueAction)node;
         StructuralFeature feature = action.structuralFeature;
-        if (!(feature instanceof Port))
+        Association association = this.getAssociation(feature);
+        Value value = this.takeTokens(action.object).get(0);
+        Value inputValue = null;
+        if (action.value != null)
         {
-            // Behaves as usual
-            doActionDefault();
-        }
-        else
-        {
-            ValueList inputValues = takeTokens(action.value);
             // NOTE: Multiplicity of the value input pin is required to be 1..1.
-            Value inputValue = inputValues.get(0);
-            if (inputValue instanceof Reference)
-            {
-                // First constructs an InteractionPoint from the inputValue
-                Reference reference = (Reference)inputValue;
-                CS_InteractionPoint interactionPoint = new CS_InteractionPoint();
-                interactionPoint.referent = reference.referent;
-                interactionPoint.definingPort = (Port)feature;
-                // The value on action.object is necessarily instanceof
-                // ReferenceToCompositeStructure (otherwise, the feature cannot
-                // be a port)
-                CS_Reference owner = (CS_Reference)takeTokens(action.object).get(0);
-                interactionPoint.owner = owner;
-                // Then replaces the Reference by an InteractionPoint
-                // in the inputValues
-                inputValues.remove(0);
-                inputValues.add(0, interactionPoint);
-                // Finally concludes with usual fUML behavior of
-                // AddStructuralFeatureValueAction (i.e., the usual behavior
-                // when
-                // the value on action.object pin is a StructuredValue)
-                int insertAt = 0;
-                if (action.insertAt != null)
-                {
-                    insertAt = ((UnlimitedNaturalValue)takeTokens(action.insertAt).get(0)).value.naturalValue;
-                }
-                if (action.isReplaceAll)
-                {
-                    owner.setFeatureValue(feature, inputValues, 0);
-                }
-                else
-                {
-                    FeatureValue featureValue = owner.getFeatureValue(feature);
-                    if (featureValue.values.size() > 0 & insertAt == 0)
-                    {
-                        // If there is no insertAt pin, then the structural
-                        // feature must
-                        // be unordered, and the insertion position is
-                        // immaterial.
-                        insertAt = ((ChoiceStrategy)getExecutionLocus().factory.getStrategy("choice")).choose(featureValue.values.size());
-                    }
-                    if (feature.multiplicityElement.isUnique)
-                    {
-                        // Remove any existing value that duplicates the input
-                        // value
-                        int j = position(interactionPoint, featureValue.values, 1);
-                        if (j > 0)
-                        {
-                            featureValue.values.remove(j - 1);
-                            if (insertAt > 0 & j < insertAt)
-                            {
-                                insertAt--;
-                            }
-                        }
-                    }
-                    if (insertAt <= 0)
-                    {
-                        // Note: insertAt = -1 indicates an unlimited value of
-                        // "*"
-                        featureValue.values.add(interactionPoint);
-                    }
-                    else
-                    {
-                        featureValue.values.add(insertAt - 1, interactionPoint);
-                    }
-                }
-                if (action.result != null)
-                {
-                    putToken(action.result, owner);
-                }
-            }
-            else
-            {
-                // behaves as usual
-                doActionDefault();
-            }
+            inputValue = this.takeTokens(action.value).get(0);
         }
-    }
-
-    public void doActionDefault()
-    {
-        // Get the values of the object and value input pins.
-        // If the given feature is an association end, then create a link
-        // between the object and value inputs.
-        // Otherwise, if the object input is a structural value, then add a
-        // value to the values for the feature.
-        // If isReplaceAll is true, first remove all current matching links or
-        // feature values.
-        // If isReplaceAll is false and there is an insertAt pin, insert the
-        // value at the appropriate position.
-        // This operation captures same semantics as fUML
-        // AddStructuralFeatureValueActionActivation.doAction(), except that
-        // when the feature is an association end, a CS_Link will be created instead
-        // of a Link
-        AddStructuralFeatureValueAction action = (AddStructuralFeatureValueAction)node;
-        StructuralFeature feature = action.structuralFeature;
-        Association association = getAssociation(feature);
-        Value value = takeTokens(action.object).get(0);
-        ValueList inputValues = takeTokens(action.value);
-        // NOTE: Multiplicity of the value input pin is required to be 1..1.
-        Value inputValue = inputValues.get(0);
-        int insertAt = 0;
-        if (action.insertAt != null)
+        int removeAt = 0;
+        if (action.removeAt != null)
         {
-            insertAt = ((UnlimitedNaturalValue)takeTokens(action.insertAt).get(0)).value.naturalValue;
+            removeAt = ((UnlimitedNaturalValue) this.takeTokens(action.removeAt).get(0)).value.naturalValue;
         }
         if (association != null)
         {
-            LinkList links = getMatchingLinks(association, feature, value);
-            Property oppositeEnd = getOppositeEnd(association, feature);
-            int position = 0;
-            if (oppositeEnd.multiplicityElement.isOrdered)
-            {
-                position = -1;
-            }
-            if (action.isReplaceAll)
+            LinkList links = this.getMatchingLinksForEndValue(association, feature, value, inputValue);
+            if (action.isRemoveDuplicates)
             {
                 for (Link link : links)
                 {
                     link.destroy();
                 }
             }
-            else if (feature.multiplicityElement.isUnique)
+            else if (action.removeAt == null)
             {
-                for (Link link : links)
+                // *** If there is more than one matching link,
+                // non-deterministically Choose one. ***
+                if (links.size() > 0)
                 {
-                    FeatureValue featureValue = link.getFeatureValue(feature);
-                    if (featureValue.values.get(0).equals(inputValue))
+                    int i = ((ChoiceStrategy)this.getExecutionLocus().factory.getStrategy("choice")).choose(links.size());
+                    links.get(i - 1).destroy();
+                }
+            }
+            else
+            {
+                boolean notFound = true;
+                int i = 1;
+                while (notFound & i <= links.size())
+                {
+                    Link link = links.get(i - 1);
+                    if (link.getFeatureValue(feature).position == removeAt)
                     {
-                        position = link.getFeatureValue(oppositeEnd).position;
-                        if (insertAt > 0 & featureValue.position < insertAt)
-                        {
-                            insertAt--;
-                        }
+                        notFound = false;
                         link.destroy();
                     }
                 }
             }
-            CS_Link newLink = new CS_Link();
-            newLink.type = association;
-            // This is necessary when setting a feature value with an insertAt
-            // position
-            newLink.locus = getExecutionLocus();
-            newLink.setFeatureValue(feature, inputValues, insertAt);
-            ValueList oppositeValues = new ValueList();
-            oppositeValues.add(value);
-
-            newLink.setFeatureValue(oppositeEnd, oppositeValues, position);
-            newLink.locus.add(newLink);
         }
-        else if (value instanceof StructuredValue) {
-            StructuredValue structuredValue = (StructuredValue)value;
-            if (action.isReplaceAll)
+        else if (value instanceof StructuredValue)
+        {
+            // If the value is a data value, then it must be copied before
+            // any change is made.
+            if (!(value instanceof Reference))
             {
-                structuredValue.setFeatureValue(feature, inputValues, 0);
+                value = value.copy();
+            }
+            FeatureValue featureValue = ((StructuredValue)value).getFeatureValue(action.structuralFeature);
+            ValueList removedValues = new ValueList();
+            if (action.isRemoveDuplicates)
+            {
+                int j = this.position(inputValue, featureValue.values, 1);
+                while (j > 0)
+                {
+                    removedValues.add(featureValue.values.get(j - 1));
+                    featureValue.values.remove(j - 1);
+                    j = this.position(inputValue, featureValue.values, j);
+                }
+            }
+            else if (action.removeAt == null)
+            {
+                intList positions = new intList();
+                int j = this.position(inputValue, featureValue.values, 1);
+                while (j > 0)
+                {
+                    positions.add(j);
+                    j = this.position(inputValue, featureValue.values, j + 1);
+                }
+                if (positions.size() > 0)
+                {
+                    // *** Nondeterministically Choose which value to remove.
+                    // ***
+                    int k = ((ChoiceStrategy)this.getExecutionLocus().factory.getStrategy("choice")).choose(positions.size());
+                    removedValues.add(featureValue.values.get(positions.get(k - 1) - 1));
+                    featureValue.values.remove(positions.get(k - 1) - 1);
+                }
             }
             else
             {
-                FeatureValue featureValue = structuredValue.getFeatureValue(feature);
-                if (featureValue.values.size() > 0 & insertAt == 0)
+                if (featureValue.values.size() >= removeAt)
                 {
-                    // *** If there is no insertAt pin, then the structural
-                    // feature must be unordered, and the insertion position is
-                    // immaterial. ***
-                    insertAt = ((ChoiceStrategy)getExecutionLocus().factory.getStrategy("choice")).choose(featureValue.values.size());
+                    removedValues.add(featureValue.values.get(removeAt - 1));
+                    featureValue.values.remove(removeAt - 1);
                 }
-                if (feature.multiplicityElement.isUnique)
+            }
+            // When values are removed from the list of values associated to the feature 
+            // (in the context of the target), these latter may be involved in links representing
+            // instance of connectors. If this is the case, links in which the removed values are
+            // involved are Destroyed.
+            for (int i = 0; i < removedValues.size(); i++)
+            {
+                CS_LinkList linkToDestroy = this.getLinksToDestroy((StructuredValue)value, feature, removedValues.get(i));
+                for (int j = 0; j < linkToDestroy.size(); j++)
                 {
-                    // Remove any existing value that duplicates the input value
-                    int j = position(inputValue, featureValue.values, 1);
-                    if (j > 0)
-                    {
-                        featureValue.values.remove(j - 1);
-                        if (insertAt > 0 & j < insertAt)
-                        {
-                            insertAt--;
-                        }
-                    }
-                }
-                if (insertAt <= 0)
-                { // Note: insertAt = -1 indicates an
-                  // unlimited value of "*"
-                    featureValue.values.add(inputValue);
-                }
-                else
-                {
-                    featureValue.values.add(insertAt - 1, inputValue);
+                    linkToDestroy.get(j).destroy();
                 }
             }
         }
         if (action.result != null)
         {
-            putToken(action.result, value);
+            this.putToken(action.result, value);
         }
+    }
+    
+    public CS_LinkList getLinksToDestroy(StructuredValue value, StructuralFeature feature, Value removedValue)
+    {
+        // Get all links that are required to be Destroyed due to the removal of the removedValue
+        CS_LinkList linksToDestroy = new CS_LinkList();
+        if (value instanceof CS_Reference)
+        {
+            CS_Reference context = (CS_Reference)value;
+            // Retrieves the feature values for the structural feature associated with this action,
+            // in the context of this reference
+            if (feature instanceof Port)
+            {
+                // The removed value is an interaction point.
+                // All links in which this interaction is involved must be Destroyed.
+                CS_InteractionPoint interactionPoint = (CS_InteractionPoint)removedValue;
+                CS_LinkList connectorInstances = context.compositeReferent.getLinks(interactionPoint);
+                for (CS_Link link : connectorInstances)
+                {
+                    linksToDestroy.add(link);
+                }
+            }
+            else
+            {
+                // Feature is not a Port. Search for all potential link
+                // ends existing in the context of this object.
+                ValueList allValuesForFeature = new ValueList();
+                for (int i = 0; i < context.referent.getFeatureValues().size(); i++)
+                {
+                    StructuralFeature currentFeature = context.referent.getFeatureValues().get(i).feature;
+                    if (feature != currentFeature)
+                    {
+                        ValueList values = this.getPotentialLinkEnds(context, currentFeature);
+                        for (int j = 0; j < values.size(); j++)
+                        {
+                            allValuesForFeature.add(values.get(j));
+                        }
+                    }
+                }
+                // Retrieves all links available at the locus
+                ExtensionalValueList extensionalValues = this.getExecutionLocus().extensionalValues;
+                CS_LinkList allLinks = new CS_LinkList();
+                for (ExtensionalValue extensionalValue : extensionalValues)
+                {
+                    if (extensionalValue instanceof CS_Link)
+                    {
+                        allLinks.add((CS_Link)extensionalValue);
+                    }
+                }
+                // In the set of links involving potential link ends. Search for all
+                // links that involve the removed value in other end. Any link in that
+                // fulfill this condition is registered in the set of link to be Destroyed.
+                for (int i = 0; i < allLinks.size(); i++)
+                {
+                    CS_Link link = allLinks.get(i);
+                    boolean linkHasToBeDestroyed = false;
+                    for (int j = 0; j < allValuesForFeature.size() && !linkHasToBeDestroyed; j++)
+                    {
+                        Value v = allValuesForFeature.get(j);
+                        StructuralFeature featureForV = link.getFeature(v);
+                        if (featureForV != null)
+                        {
+                            for (int k = 0; k < link.getFeatureValues().size() && !linkHasToBeDestroyed; k++)
+                            {
+                                FeatureValue otherFeatureValue = link.getFeatureValues().get(k);
+                                if (otherFeatureValue.feature != featureForV)
+                                {
+                                    for (int l = 0; l < otherFeatureValue.values.size() && !linkHasToBeDestroyed; l++)
+                                    {
+                                        if (otherFeatureValue.values.get(l) == removedValue)
+                                        {
+                                            linkHasToBeDestroyed = true;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    if (linkHasToBeDestroyed)
+                    {
+                        linksToDestroy.add(link);
+                    }
+                }
+            }
+        }
+        return linksToDestroy;
+    }
+    
+    public ValueList getPotentialLinkEnds(CS_Reference context, StructuralFeature feature)
+    {
+        // Retrieves all feature values for the context object for the given feature,
+        // as well as all interaction point for these values
+    	ValueList potentialLinkEnds = new ValueList();
+        FeatureValue featureValue = context.getFeatureValue(feature);
+        for (int i = 0; i < featureValue.values.size(); i++)
+        {
+            Value v = featureValue.values.get(i);
+            potentialLinkEnds.add(v);
+            if (v instanceof CS_Reference)
+            {
+                // Add all interaction points associated with v
+                for (int j = 0; j < ((CS_Reference)v).referent.getFeatureValues().size(); j++)
+                {
+                    if (((CS_Reference)v).referent.getFeatureValues().get(j).feature instanceof Port)
+                    {
+                        ValueList interactionPoints = ((CS_Reference)v).referent.getFeatureValues().get(j).values;
+                        for (Value interactionPoint : interactionPoints)
+                        {
+                            potentialLinkEnds.add(interactionPoint);
+                        }
+                    }
+                }
+            }
+        }
+        return potentialLinkEnds;
     }
 } // CS_RemoveStructuralFeatureValueActionActivation
